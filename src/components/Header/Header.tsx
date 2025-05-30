@@ -1,0 +1,141 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { useTheme } from '@/context/ThemeContext';
+import styles from './Header.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
+import ThemeToggle from '../ThemeToggle';
+
+const navItems = [
+  'About',
+  'Projects',
+  'Skills',
+  'Experiences',
+  'Educations',
+  'Contact'
+];
+
+export default function Header() {
+  const { theme, toggleTheme } = useTheme();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeHash, setActiveHash] = useState('');
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            if (id) {
+              setActiveHash(`#${id}`);
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+  
+    navItems.forEach((item) => {
+      const section = document.getElementById(item.toLowerCase());
+      if (section) observer.observe(section);
+    });
+  
+    return () => observer.disconnect();
+  }, []);
+  
+  
+
+  const handleLinkClick = () => setIsMenuOpen(false);
+
+  const renderNavLinks = (onClick?: () => void) =>
+    navItems.map((item) => {
+      const hash = `#${item.toLowerCase()}`;
+      return (
+        <li key={item}>
+          <Link
+            href={hash}
+            onClick={onClick}
+            className={`${styles.navItem} ${activeHash === hash ? styles.active : ''}`}
+            
+          >
+            {item}
+          </Link>
+        </li>
+      );
+    });
+
+  return (
+    <header
+      className={`w-full fixed top-0 z-50 transition-colors duration-300 ${
+        theme === 'dark' ? 'bg-primary text-white' : 'bg-white text-black'
+      } ${styles.header}`}
+    >
+      <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+        <div className="flex items-center gap-3">
+          <Image
+            src="/images/profile-logo.jpeg"
+            alt="Bedir Gocmez"
+            width={40}
+            height={40}
+            className={styles.avatar}
+          />
+          <div>
+            <h1 className={styles.name}>Bedir Gocmez</h1>
+            <p className={`${styles.title} dark:text-[#b95e00]`}>Frontend Developer</p>
+          </div>
+        {/* Desktop Nav */}
+        <nav className={`hidden lg:flex ${styles.nav} ms-6`}>
+          <ul className="flex gap-4">{renderNavLinks()}</ul>
+        </nav>
+        </div>
+
+
+        {/* Right Section */}
+        <div className="flex items-center gap-4">
+            <a
+                href="/assets/Bedir-Gocmez-CV.pdf"
+                download
+                className={`${styles.download} flex items-center `}
+                >
+                <FontAwesomeIcon icon={faFileArrowDown} className="mr-2 h-[16px]" />
+                CV
+            </a>
+          <ThemeToggle />
+          <button
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            className={`${styles.menuButton} ${isMenuOpen ? 'open' : ''}`}
+            aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
+          >
+            <span className={`${styles.bar} dark:bg-white`}></span>
+            <span className={`${styles.bar} dark:bg-white`}></span>
+            <span className={`${styles.bar} dark:bg-white`}></span>
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div
+          className={`md:hidden  ${styles.overlay}`}
+          onClick={() => setIsMenuOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Mobile Menu */}
+      <nav
+        className={`md:hidden fixed top-0 right-0 w-2/5 z-50 transition-transform duration-300 transform ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        } ${theme === 'dark' ? 'bg-primary text-white' : 'bg-white text-black'} shadow-lg p-6`}
+      >
+        <ul className={styles.nav}>{renderNavLinks(handleLinkClick)}</ul>
+      </nav>
+    </header>
+  );
+}
