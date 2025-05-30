@@ -1,13 +1,14 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import { useTheme } from '@/context/ThemeContext';
 import styles from './Header.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import ThemeToggle from '../ThemeToggle';
+import Download from '../Download/Download';
+import { renderNavLinks } from './renderNavLinks';
 
 const navItems = [
   'About',
@@ -52,23 +53,6 @@ export default function Header() {
 
   const handleLinkClick = () => setIsMenuOpen(false);
 
-  const renderNavLinks = (onClick?: () => void) =>
-    navItems.map((item) => {
-      const hash = `#${item.toLowerCase()}`;
-      return (
-        <li key={item}>
-          <Link
-            href={hash}
-            onClick={onClick}
-            className={`${styles.navItem} ${activeHash === hash ? styles.active : ''}`}
-            
-          >
-            {item}
-          </Link>
-        </li>
-      );
-    });
-
   return (
     <header
       className={`w-full fixed top-0 z-50 transition-colors duration-300 ${
@@ -90,21 +74,14 @@ export default function Header() {
           </div>
         {/* Desktop Nav */}
         <nav className={`hidden lg:flex ${styles.nav} ms-6`}>
-          <ul className="flex gap-4">{renderNavLinks()}</ul>
+          <ul className="flex gap-4">{renderNavLinks({ navItems, activeHash })}</ul>
         </nav>
         </div>
 
 
         {/* Right Section */}
         <div className="flex items-center gap-4">
-            <a
-                href="/assets/Bedir-Gocmez-CV.pdf"
-                download
-                className={`${styles.download} flex items-center dark:text-white`}
-                >
-                <FontAwesomeIcon icon={faFileArrowDown} className="mr-2 h-[16px]" />
-                CV
-            </a>
+          <Download />
           <ThemeToggle />
           <button
             onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -137,7 +114,7 @@ export default function Header() {
         <button onClick={() => setIsMenuOpen(false)} className='absolute top-[44px] left-[25px]'>
             <FontAwesomeIcon icon={faCircleXmark} className='h-[27px]'/>
         </button>
-        <ul className={styles.nav}>{renderNavLinks(handleLinkClick)}</ul>
+        <ul className={styles.nav}>{renderNavLinks({ navItems, activeHash, onClick: handleLinkClick })}</ul>
       </nav>
     </header>
   );
