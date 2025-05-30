@@ -1,0 +1,31 @@
+.aboutSection {
+    scroll-margin-top: 80px;
+  }
+  
+  .nameTitle span {
+    background: linear-gradient(to right, #fff 0%, #fff 10%, #ff8300 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+  }
+  
+  @keyframes shine {
+    0% {
+      background-position: 0;
+    }
+    60% {
+      background-position: 600px;
+    }
+    100% {
+      background-position: 600px;
+    }
+  }
+  .photoWrapper {
+    width: 42%;
+    max-width: 550px;
+    min-width: 320px;
+  }
+
+  .aboutImg {
+    filter: drop-shadow(-2px 5px 6px #00000082);
+  }

@@ -70,7 +70,7 @@ export default function Header() {
           />
           <div>
             <h1 className={styles.name}>Bedir Gocmez</h1>
-            <p className={`${styles.title} dark:text-[#b95e00]`}>Frontend Developer</p>
+            <p className={`${styles.title} dark:text-[#ff8000]`}>Frontend Developer</p>
           </div>
         {/* Desktop Nav */}
         <nav className={`hidden lg:flex ${styles.nav} ms-6`}>

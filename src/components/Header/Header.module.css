@@ -1,6 +1,6 @@
 .header {
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
   }
   
   .avatar {
@@ -15,7 +15,7 @@
   
   .title {
     font-size: 0.875rem;
-    color: #33bbc5;
+    color: #1c8288;
     /* font-weight: 800 */
   }
   

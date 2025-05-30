@@ -1,5 +1,5 @@
-import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
 import styles from './Download.module.css';
 
 
