@@ -21,19 +21,23 @@
   
   .download {
     font-weight: 500;
+    font-size: 13px;
+    width: 72px;
+    height: 30px;
+    max-width: 72px;
+    display: flex;
+    justify-content: space-around;
     padding: 0.25rem 0.75rem;
+    border: 1px solid var(--color-active);
     border-radius: 999px;
-    background-color: var(--color-active);
+    color: #33bbc5;
     transition: background-color 0.3s ease;
-    color: #fff;
-    width: 67px;
-    max-width: 67px;
-  }
-  
-  .download:hover {
-    /* opacity: 0.7; */
-    background-color: #fff;
-    color: var(--color-active);
+}
+
+.download:hover {
+      border: 1px solid var(--color-hover);
+    /* background-color: #fff; */
+    color: var(--color-hover);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   }
   
