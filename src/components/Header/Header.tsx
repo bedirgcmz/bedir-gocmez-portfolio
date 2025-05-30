@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { useTheme } from '@/context/ThemeContext';
 import styles from './Header.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
 import ThemeToggle from '../ThemeToggle';
 
 const navItems = [
@@ -134,6 +134,9 @@ export default function Header() {
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         } ${theme === 'dark' ? 'bg-primary text-white' : 'bg-white text-black'} shadow-lg p-6`}
       >
+        <button onClick={() => setIsMenuOpen(false)} className='absolute top-[44px] left-[25px]'>
+            <FontAwesomeIcon icon={faCircleXmark} className='h-[27px]'/>
+        </button>
         <ul className={styles.nav}>{renderNavLinks(handleLinkClick)}</ul>
       </nav>
     </header>
