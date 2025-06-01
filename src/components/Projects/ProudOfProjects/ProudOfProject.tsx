@@ -72,7 +72,7 @@ const ProudOfProjects = () => {
 
   return (
     <div>
-      <h1 className="text-center text-xl text-[var(--color-hover)]">Projects I’m Proud Of</h1>
+      <h1 className="text-center text-xl text-[var(--color-lighter)]">Projects I’m Proud Of</h1>
       <div className={styles.container}>
         {projects.map((project, index) => (
           <div className={styles.card} key={index}>

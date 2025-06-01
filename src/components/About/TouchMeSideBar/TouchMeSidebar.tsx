@@ -5,7 +5,7 @@ import styles from './TouchMeSidebar.module.css';
 const socials = [
   {
     icon: faGithub,
-    url: 'https://github.com/bedirgocmez',
+    url: 'https://github.com/bedirgcmz',
     label: 'GitHub',
   },
   {

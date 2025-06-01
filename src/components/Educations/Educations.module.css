@@ -1,4 +1,4 @@
-/* Educations.module.css */
+
 .wrapper {
     padding: 2rem 1rem;
   }
@@ -8,33 +8,6 @@
   .cardWrapper {
     @apply flex flex-col max-w-[1200px] m-auto md:flex-row flex-wrap gap-6 md:gap-8 items-center justify-center;
   }
-  /* .card {
-    @apply flex items-start gap-4 min-w-[320px] w-[420px] h-[200px] relative bg-white dark:bg-zinc-800 p-4 rounded-lg shadow-lg transition-all duration-300;
-  
-  
-    transform: perspective(1000px) rotateX(12deg) rotateY(-8deg) rotateZ(-4deg);
-    transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
-    animation: tiltFloat 5s infinite ease-in-out;
-    z-index: 1;
-  }
-  
-  .card:hover {
-    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-    animation: none;
-    z-index: 10;
-  }
-  
-  @keyframes tiltFloat {
-    0% {
-      transform: perspective(1000px) rotateX(12deg) rotateY(-8deg) rotateZ(-4deg);
-    }
-    50% {
-      transform: perspective(1000px) rotateX(8deg) rotateY(-4deg) rotateZ(-2deg);
-    }
-    100% {
-      transform: perspective(1000px) rotateX(12deg) rotateY(-8deg) rotateZ(-4deg);
-    }
-  } */
 
   .card {
     @apply flex items-start gap-4 w-[420px] h-[200px] relative bg-white dark:bg-zinc-800 p-4 rounded-lg shadow-lg;
@@ -83,15 +56,13 @@
     @apply mt-2 text-sm text-gray-500 dark:text-gray-600;
   }
   .date {
-    @apply mt-1 text-xs text-[var(--color-active)];
+    @apply mt-1 text-xs text-[var(--color-active-darker)];
   }
   .loaderWrapper {
     @apply flex flex-col max-w-[1200px] m-auto md:flex-row flex-wrap gap-6 md:gap-8 items-center justify-center;
   }
   .skeletonCard {
     @apply flex items-start gap-4 w-[420px] h-[200px] relative bg-white dark:bg-zinc-800 p-4 rounded-lg shadow-lg;
-    /* height: 120px;
-    border-radius: 0.75rem; */
     background: linear-gradient(90deg, #ccc 25%, #e0e0e0 50%, #ccc 75%);
     background-size: 200% 100%;
     animation: shimmer 1.2s infinite;

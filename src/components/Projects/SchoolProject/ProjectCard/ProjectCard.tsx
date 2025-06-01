@@ -35,7 +35,7 @@ export default function ProjectCard({ image, project_name, info, link, github_li
           href={github_link}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm font-medium text-[var(--color-hover)] hover:underline"
+          className="text-sm font-medium text-[var(--color-lighter)] hover:underline"
         >
           GitHub
         </a>

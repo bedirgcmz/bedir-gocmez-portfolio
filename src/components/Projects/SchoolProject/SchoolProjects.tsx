@@ -5,7 +5,7 @@ import ProjectSwiper from './ProjectSwiper';
 export default function SchoolProjects({ controls }: { controls: any }) {
   return (
     <section className="min-h-[500px] bg-[--color-bg] py-10 mt-16">
-      <h1 className="text-center text-xl text-[var(--color-hover)]">Some of School's Projects</h1>
+      <h1 className="text-center text-xl text-[var(--color-lighter)]">Some of School's Projects</h1>
       <div className="container mx-auto">
         <motion.div
           variants={{

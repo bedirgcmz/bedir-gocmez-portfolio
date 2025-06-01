@@ -1,7 +1,9 @@
 import AboutSection from "@/components/About/AboutSection";
+import ContactSection from "@/components/Contact/ContactSection";
 import DividerCircle from "@/components/DividerCircle/DividerCircle";
 import Educations from "@/components/Educations/Educations";
 import ExperienceSection from "@/components/Experience/ExperienceSection";
+import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import HeroSection from "@/components/Hero/HeroSection";
 import ProjectSection from "@/components/Projects/ProjectSection";
@@ -29,7 +31,10 @@ export default function Home() {
       <DividerCircle sectionId="educations"/>
       <SectionTitle text="What I’ve Learned" icon={faUserGraduate} />
       <Educations />
-      <h1 className="text-3xl font-bold text-primary dark:text-accent h-40">Tema Renk Testi</h1>
+      <DividerCircle sectionId="contact"/>
+      <SectionTitle text="Contact Me" icon={faUserGraduate} />
+      <ContactSection />
+      <Footer />
     </main>
   );
 }

@@ -9,7 +9,7 @@ const Timeline: React.FC = () => {
     <div className="absolute left-0 lg:relative">
         <div className={`relative mx-6 ${styles.timelineWrapper}`}>
             <div
-                className={`flex flex-col justify-between items-center w-[2.6rem] rounded-full bg-[var(--color-active)] h-full ${styles.timeline}`}
+                className={`flex flex-col justify-between items-center w-[2.6rem] rounded-full bg-[var(--color-active-darker)] h-full ${styles.timeline}`}
                 aria-hidden="true"
             >
                 <span className="text-white font-bold">2025</span>
