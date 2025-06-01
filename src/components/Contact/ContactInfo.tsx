@@ -8,7 +8,7 @@ export default function ContactInfo() {
   return (
     <div className={styles.infoBox}>
       <h2 id="contact-heading" className={styles.heading}>
-        Let’s Talk
+        Let&rsquo;s Talk
       </h2>
       <p className={`${styles.description} text-gray-500 dark:text-gray-400`}>
         Do you have a project in mind or just want to say hello? I’m always open to new ideas, collaboration, or simply a friendly chat.
