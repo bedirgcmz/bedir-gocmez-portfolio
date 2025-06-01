@@ -1,0 +1,35 @@
+[
+    {
+      "id": 1,
+      "icon": "faCode",
+      "title": "Frontend / App Developer",
+      "company": "Changemaker Educations",
+      "description": "Agile method, team collaboration, Jira usage. Learned React, Next.js, TypeScript, Supabase, Git, Tailwind CSS, and accessibility best practices. Working on real-world projects in a team.",
+      "date": "09.2023 – 06.2025"
+    },
+    {
+      "id": 2,
+      "icon": "faLaptopCode",
+      "title": "Full Stack Web Developer",
+      "company": "HiCoders",
+      "description": "End-to-end project development. Learned HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, MySQL. Built fullstack project as final assignment.",
+      "date": "08.2021 – 07.2022"
+    },
+    {
+      "id": 3,
+      "icon": "faPersonWalkingArrowRight",
+      "title": "Student Coaching",
+      "company": "Career World",
+      "description": "Online education and international certification. Remote exams and digital course management.",
+      "date": "10.2018 – 12.2018"
+    },
+    {
+      "id": 4,
+      "icon": "faPersonChalkboard",
+      "title": "Teacher (Master)",
+      "company": "Çanakkale Onsekiz Mart University",
+      "description": "Thesis: Effect of debate techniques on student success and critical thinking. 2-year academic research.",
+      "date": "09.2014 – 07.2016"
+    }
+  ]
+  
