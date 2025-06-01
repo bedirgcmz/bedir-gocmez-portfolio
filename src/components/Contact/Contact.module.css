@@ -5,9 +5,8 @@
   }
   
 .wrapper {
-    @apply max-w-5xl mx-auto flex flex-col md:flex-row gap-6 justify-center items-center;
+    @apply max-w-5xl mx-auto flex flex-col md:flex-row md:p-[24px] gap-6 justify-center items-center;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    padding: 24px;
     border-radius: 12px;
 }
 

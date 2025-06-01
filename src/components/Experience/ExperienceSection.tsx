@@ -10,9 +10,9 @@ const ExperienceSection: React.FC = () => {
       aria-label="Work and teaching experiences timeline"
     >
 
-    <div className="flex flex-col lg:flex-row relative justify-center items-start gap-10 w-full  ps-[110px] pd:ms-0">
+    <div className="flex flex-col lg:flex-row relative justify-center items-start gap-10 w-full ps-[70px] md:ps-[110px] pd:ms-0">
         {/* Left Cards */}
-        <div className="flex flex-col gap-8 lg:gap-36 items-end flex-1 w-[380px]">
+        <div className="flex flex-col gap-8 lg:gap-36 items-end flex-1 md:w-[380px]">
         
             <ExperienceCard
             company="Custellence"
