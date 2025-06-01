@@ -9,7 +9,7 @@ Welcome to my professional portfolio! This application showcases my skills, proj
 ## 🚀 Key Features
 
 - **Modern Tech Stack**: Built with cutting-edge technologies
-- **Perfect Accessibility**: 100% WCAG compliant
+- **Perfect Accessibility**: 98% WCAG compliant
 - **Pixel-Perfect UI**: Clean, intuitive design
 - **Fully Responsive**: Flawless on all devices
 - **Performance Optimized**: Fast loading and smooth animations
