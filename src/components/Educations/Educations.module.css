@@ -10,7 +10,7 @@
   }
 
   .card {
-    @apply flex items-start gap-4 w-[420px] h-[200px] relative bg-white dark:bg-zinc-800 p-4 rounded-lg shadow-lg;
+    @apply flex items-start gap-4 w-[350px] md:w-[420px] h-[200px] relative bg-white dark:bg-zinc-800 p-4 rounded-lg shadow-lg;
     transition: box-shadow 0.3s ease-in-out;
   }
 

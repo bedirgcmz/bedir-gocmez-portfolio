@@ -7,7 +7,7 @@ import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 const Timeline: React.FC = () => {
   return (
     <div className="absolute left-0 lg:relative">
-        <div className={`relative mx-6 ${styles.timelineWrapper}`}>
+        <div className={`relative md:mx-6 ${styles.timelineWrapper}`}>
             <div
                 className={`flex flex-col justify-between items-center w-[2.6rem] rounded-full bg-[var(--color-active-darker)] h-full ${styles.timeline}`}
                 aria-hidden="true"

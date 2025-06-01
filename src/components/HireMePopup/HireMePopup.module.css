@@ -1,0 +1,211 @@
+/* components/HireMePopup/HireMePopup.module.css */
+@keyframes rotate {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+  
+  .animation {
+    position: relative;
+    z-index: 0;
+    border-radius: 29px;
+    overflow: hidden;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .animation::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    border-radius: 25px;
+    background-color: rgb(9, 174, 192);
+    background-repeat: no-repeat;
+    background-size: 50% 50%, 50% 50%;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-image: linear-gradient(#fe0920, #fe0920, #f645fa, #0d6efd);
+    animation: rotate 8s linear infinite;
+  }
+  
+  .animation::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 6px;
+    top: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    background: #004046;
+    border-radius: 25px;
+  }
+  
+  .popupBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 64, 70, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popupContainer {
+    /* background: url("/images/hiremebg2.png"); */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 541px;
+    height: 451px;
+    border-radius: 16px;
+    position: relative;
+    text-align: center;
+    top: -8px;
+    left: -7px;
+  }
+  
+  .projects {
+    position: absolute;
+    right: 40px;
+    top: 58px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    z-index: 23;
+    overflow-y: scroll;
+    height: 340px;
+    padding: 6px;
+    border-radius: 6px;
+  }
+  
+  .projectLink {
+    display: block;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  
+  .projectImg {
+    width: 140px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .projectLink:hover .projectImg {
+    transform: scale(1.1);
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #ff7d00;
+    z-index: 22;
+    background: none;
+    border: none;
+  }
+
+  .imageWrapper {
+    position: relative;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 451px;
+    top: 74px;
+  }
+  
+  .hireMeBgImg {
+    width: 560px;
+    height: auto;
+    position: absolute;
+    top: 3px;
+    left: 7px;
+    border-radius: 70px;
+    z-index: 20;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  
+  .popupContent {
+    font-size: 1.2rem;
+    color: #faefe0;
+    z-index: 22;
+  }
+  
+  .hireMeButton {
+    display: inline-block;
+    color: #faefe0;
+    padding: 6px 0.7rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    margin-right: 13rem;
+    box-shadow: 0 4px 10px #0000005c;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .hireMeButton:hover {
+    transform: scale(1.05);
+  }
+  
+  .hireMeButtonImg {
+    width: 80px;
+    height: 30px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .popupContainer {
+      padding: 1.5rem;
+    }
+  }
+
+  @media (max-width: 600px) {    
+    .popupContainer {
+      width: 357px;
+      height: 298px;
+    }
+    
+    .closeButton {
+        top: 9px;
+        right: 8px;
+        font-size: 1.2rem;
+    }
+    
+    .projects {
+        top: 40px;
+        right: 22px;
+        height: 230px;
+    }
+    
+    .projectImg {
+      width: 97px;
+    }
+    
+    .hireMeBgImg {
+      top: 5px;
+    }
+    .hireMeButton {
+      margin-bottom: 0.5rem;
+      margin-right: 9rem;
+    }
+    
+    .hireMeButtonImg {
+      width: 60px;
+      height: 20px;
+    }
+  }

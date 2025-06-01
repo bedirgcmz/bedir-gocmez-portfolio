@@ -23,7 +23,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} ${theme}`}>
-      <body>
+      <body className='pt-[70px]'>
         <ThemeProvider>
             {children}
         </ThemeProvider>

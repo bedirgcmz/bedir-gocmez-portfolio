@@ -1,3 +1,4 @@
+"use client"
 import AboutSection from "@/components/About/AboutSection";
 import ContactSection from "@/components/Contact/ContactSection";
 import DividerCircle from "@/components/DividerCircle/DividerCircle";
@@ -6,6 +7,7 @@ import ExperienceSection from "@/components/Experience/ExperienceSection";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import HeroSection from "@/components/Hero/HeroSection";
+import HireMePopup from "@/components/HireMePopup/HireMePopup";
 import ProjectSection from "@/components/Projects/ProjectSection";
 import SectionTitle from "@/components/SectionTitle/SectionTitle";
 import SkillsSection from "@/components/Skills/Skills/SkillsSection";
@@ -13,7 +15,7 @@ import { faCode, faIdCard, faCubes, faUserGraduate, faBriefcase } from '@fortawe
 
 export default function Home() {
   return (
-    <main className="min-h-screen min-w-screen pt-20">
+    <main className="min-h-screen min-w-screen">
       <Header />
       <HeroSection />
       <DividerCircle sectionId="about"/>
@@ -35,6 +37,7 @@ export default function Home() {
       <SectionTitle text="Contact Me" icon={faUserGraduate} />
       <ContactSection />
       <Footer />
+      <HireMePopup />
     </main>
   );
 }

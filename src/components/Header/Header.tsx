@@ -55,7 +55,7 @@ export default function Header() {
 
   return (
     <header
-      className={`w-full fixed top-0 z-50 transition-colors duration-300 ${
+      className={`w-full fixed top-0 z-50 transition-colors duration-300 max-w-[100vw] ${
         theme === 'dark' ? 'bg-primary text-white' : 'bg-white text-black'
       } ${styles.header}`}
     >

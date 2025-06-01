@@ -37,7 +37,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
 
   return (
     <motion.article
-      className={`relative rounded-md shadow-md w-[380px] max-w-md bg-white dark:bg-zinc-800 text-gray-800 dark:text-gray-200  ${styles.card}`}
+      className={`relative rounded-md shadow-md w-[310px] sm:w-[380px] max-w-md bg-white dark:bg-zinc-800 text-gray-800 dark:text-gray-200  ${styles.card}`}
       initial="hidden"
       whileInView="visible"
       variants={animation}
