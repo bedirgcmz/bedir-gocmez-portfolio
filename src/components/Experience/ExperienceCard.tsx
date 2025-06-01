@@ -20,7 +20,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
   date,
   iconClass,
   direction = "left",
-  delay = 0.2,
+  delay = 0.3,
 }) => {
   const animation = {
     hidden: {
@@ -30,17 +30,20 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
     visible: {
       opacity: 1,
       x: 0,
+    //   transition: {  type: "spring", stiffness: 160, damping: 7 },
       transition: { type: "spring", delay, duration: 0.7 },
     },
   };
 
   return (
     <motion.article
-      className={`relative rounded-md shadow-md w-[380px] max-w-md bg-white dark:bg-zinc-800 text-gray-800 dark:text-gray-200 transition-all hover:scale-[0.85] ${styles.card}`}
+      className={`relative rounded-md shadow-md w-[380px] max-w-md bg-white dark:bg-zinc-800 text-gray-800 dark:text-gray-200  ${styles.card}`}
       initial="hidden"
       whileInView="visible"
       variants={animation}
       viewport={{ once: true, amount: 0.4 }}
+      whileHover={{ scale: 0.96 }}
+      transition={{ type: "spring", stiffness: 160, damping: 7 }}
       aria-label={`${role} at ${company}`}
     >
       <div className="absolute inset-0 hover:scale-105 hover:shadow-lg transition-transform rounded-md z-0" aria-hidden="true" />
