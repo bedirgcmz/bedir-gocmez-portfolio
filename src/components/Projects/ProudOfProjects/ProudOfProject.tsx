@@ -33,7 +33,7 @@ const projects: Project[] = [
     title: 'Parking Time',
     url:"parking",
     description:
-      'I contributed to the ParkingTime project as part of a cross-functional team. This parking management system was developed using Next.js, TypeScript, Tailwind CSS, and Contentful CMS for content management. Our team followed Agile methodologies and managed the project workflow via Jira. I was involved in building reusable React components, integrating API endpoints, and ensuring accessibility and responsiveness across devices.',
+      'I contributed to the ParkingTime project as part of a cross-functional team. Built with Next.js, TypeScript, Tailwind CSS, and Contentful CMS, the parking management system followed Agile practices and was managed via Jira. I developed reusable React components, integrated API endpoints, and ensured accessibility and responsiveness across devices.',
     alt: 'Parking Time project image',
     demoLink: 'https://parking-time-next.vercel.app/',
   },
@@ -80,7 +80,7 @@ const ProudOfProjects = () => {
               {screenWidth ? 'Click me!' : 'Hover me!'}
             </p>
             <div className={styles.imageContainer}>
-              <img src={`/images/${project.url}.jpg`} alt={project.alt} />
+              <img src={`/images/proudProjects/${project.url}.jpg`} alt={project.alt} />
             </div>
             <div className={styles.details}>
               <h2>{project.title}</h2>
