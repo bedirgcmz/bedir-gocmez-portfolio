@@ -4,6 +4,8 @@
 @tailwind utilities;
 
 :root {
+  --font-main: var(--font-inter);
+  --font-accent: var(--font-space);
   --color-active: #1c8288;
   --color-hover: #ff8300;
   --color-hover-darker: #b95e00;
@@ -23,8 +25,16 @@
 
 body {
   @apply bg-white text-black transition-colors duration-300;
+  font-family: var(--font-main), sans-serif;
 }
 
 .dark body {
   @apply bg-primary text-white;
+}
+
+:root {
+
+}
+
+body {
 }

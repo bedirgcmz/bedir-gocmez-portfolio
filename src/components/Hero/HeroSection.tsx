@@ -33,9 +33,7 @@ export default function HeroSection() {
                     </div>
                 </div>
             </div>
-            {/* <SocialMediaIcons /> */}
         </div>
-
         <Photo />
     </section>
   );

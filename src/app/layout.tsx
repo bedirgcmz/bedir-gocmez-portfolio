@@ -3,6 +3,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from '@/context/ThemeContext'
 import 'react-toastify/dist/ReactToastify.css';
+import { Inter, Space_Grotesk } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space' });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +22,7 @@ export default async function RootLayout({
   const theme = headersList.get('x-theme') === 'light' ? 'light' : 'dark';
 
   return (
-    <html lang="en" className={theme}>
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} ${theme}`}>
       <body>
         <ThemeProvider>
             {children}
