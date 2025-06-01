@@ -59,7 +59,7 @@ export default function Header() {
         theme === 'dark' ? 'bg-primary text-white' : 'bg-white text-black'
       } ${styles.header}`}
     >
-      <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div className="max-w-[1600px] mx-auto px-8 py-3 flex justify-between items-center">
         <div className="flex items-center gap-3">
           <Image
             src="/images/profile-logo.jpeg"

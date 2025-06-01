@@ -1,7 +1,5 @@
-import styles from './Hero.module.css';
 import ParticlesBackground from './ParticlesBackground';
-import Photo from '../About/Photo';
-import SocialMediaIcons from './SocialMediaIcons';
+import Photo from './Photo';
 import HireMeButton from '../About/HireMeButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';

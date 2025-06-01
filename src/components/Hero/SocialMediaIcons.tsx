@@ -2,8 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faLinkedin,
   faGithub,
-  faInstagram,
-  faXTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
@@ -14,7 +12,7 @@ type SocialItem = {
 
 const socialItems: SocialItem[] = [
   { icon: faLinkedin, url: 'https://linkedin.com/in/bedirgocmez' },
-  { icon: faGithub, url: 'https://github.com/bedirgocmez' },
+  { icon: faGithub, url: 'https://github.com/bedirgcmz' },
 ];
 
 const SocialMediaIcon = ({ icon, url }: SocialItem) => (

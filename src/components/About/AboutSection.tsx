@@ -1,7 +1,5 @@
 
 import Info from './Info';
-import Photo from './Photo';
-import HireMeButton from './HireMeButton';
 import styles from './About.module.css';
 import CardImages from './CardImages';
 import WhoIAm from './WhoIAm';

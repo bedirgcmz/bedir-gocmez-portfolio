@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import styles from './About.module.css';
+import styles from './HeroSection.module.css';
 import { useTheme } from '@/context/ThemeContext';
 
 export default function Photo() {
@@ -8,7 +8,7 @@ export default function Photo() {
 
   return (
       <div
-        className={`rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 mt-[-100px] md:mt-0 ${
+        className={`rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-95 mt-[-100px] md:mt-0 ${
           styles.photoWrapper
         }`}
       >
@@ -17,7 +17,7 @@ export default function Photo() {
           alt="Bedir Gocmez Portrait"
           width={400}
           height={400}
-          className={`object-cover w-full h-full ${styles.aboutImg}`}
+          className={`object-cover w-full h-full ${styles.heroImg}`}
           priority
         />
       </div>

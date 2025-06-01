@@ -20,12 +20,3 @@
       background-position: 600px;
     }
   }
-  .photoWrapper {
-    width: 42%;
-    max-width: 550px;
-    min-width: 320px;
-  }
-
-  .aboutImg {
-    filter: drop-shadow(-2px 5px 6px #00000082);
-  }
