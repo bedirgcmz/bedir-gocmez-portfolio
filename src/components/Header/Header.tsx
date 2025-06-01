@@ -20,7 +20,7 @@ const navItems = [
 ];
 
 export default function Header() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeHash, setActiveHash] = useState('');
 

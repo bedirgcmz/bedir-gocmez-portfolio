@@ -1,6 +1,6 @@
 
 "use client"
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
@@ -21,7 +21,6 @@ type Project = {
   };
 
 export default function ProjectSwiper() {
-  const [screenSize, setScreenSize] = useState(3);
   const [projects, setProjects] = useState<Project[] | null>(null);
 
 

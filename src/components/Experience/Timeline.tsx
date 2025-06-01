@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "./Experience.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 const Timeline: React.FC = () => {
   return (

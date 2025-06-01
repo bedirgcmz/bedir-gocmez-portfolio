@@ -1,10 +1,8 @@
 'use client';
 
-import { useTheme } from '@/context/ThemeContext';
 import Image from 'next/image';
 
 export default function WhoIAm() {
-  const { theme } = useTheme();
 
   return (
     <section
