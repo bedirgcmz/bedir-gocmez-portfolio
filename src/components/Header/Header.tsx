@@ -12,8 +12,8 @@ import { renderNavLinks } from './renderNavLinks';
 
 const navItems = [
   'About',
-  'Projects',
   'Skills',
+  'Projects',
   'Experiences',
   'Educations',
   'Contact'
@@ -81,7 +81,7 @@ export default function Header() {
 
         {/* Right Section */}
         <div className="flex items-center gap-4">
-          <Download />
+          <span className='hidden sm:inline-block'><Download /></span>
           <ThemeToggle />
           <button
             onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -114,7 +114,9 @@ export default function Header() {
         <button onClick={() => setIsMenuOpen(false)} className='absolute top-[44px] left-[25px]'>
             <FontAwesomeIcon icon={faCircleXmark} className='h-[27px]'/>
         </button>
-        <ul className={styles.nav}>{renderNavLinks({ navItems, activeHash, onClick: handleLinkClick })}</ul>
+        <ul className={styles.nav}>{renderNavLinks({ navItems, activeHash, onClick: handleLinkClick })}
+        <li className='mt-6'><Download /></li>
+        </ul>
       </nav>
     </header>
   );

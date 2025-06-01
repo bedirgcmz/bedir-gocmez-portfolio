@@ -1,0 +1,12 @@
+.profesionalSkills {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 640px) {
+    .skillsCardContainer {
+        padding-left: 11% !important;
+        padding-right: 11% !important;
+    }
+      }

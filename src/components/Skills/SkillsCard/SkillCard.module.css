@@ -1,0 +1,13 @@
+.skillCard {
+    width: 150px;
+    padding: 4px;
+    box-shadow: 0 0 15px rgba(51, 187, 197, .45);
+    /* transition: transform 0.3s ease-in-out; */
+  } 
+
+  @media (min-width: 768px)  {
+    .skillCard {
+        width: 180px;
+      } 
+  }
+  

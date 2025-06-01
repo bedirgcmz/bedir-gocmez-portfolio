@@ -1,0 +1,90 @@
+
+.container {
+  max-width: 1480px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  position: relative;
+  margin: 20px 0;
+  margin-top: 40px;
+  width: 300px;
+  height: 400px;
+  transform-style: preserve-3d;
+  transform: perspective(2000px);
+  transition: 1s;
+  border-radius: 12px;
+  border: 2px solid var(--color-active);
+  padding: 8px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.card:hover {
+  transform: perspective(2000px) rotate(-10deg);
+  box-shadow: inset 20px 0 50px #00000052;
+}
+
+.hoverText {
+  position: absolute;
+  top: -30px;
+  left: 37%;
+  color: var(--color-active);
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-origin: left;
+  z-index: 2;
+  transition: 1s;
+}
+
+.imageContainer img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card:hover .imageContainer {
+  transform: rotateY(-135deg);
+}
+
+.details {
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  padding: 10px 16px;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 96.4%;
+  width: 95%;
+}
+
+.details h2 {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 2em;
+  color: var(--color-hover);
+}
+
+.details p {
+  margin: 0;
+  padding: 0;
+  line-height: 22px;
+  font-size: 0.9em;
+  color: #1d8288;
+}

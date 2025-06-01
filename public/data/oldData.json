@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "project_name": "English Irregular Verbs",
+        "image": "learnEnglish.jpg",
+        "info": "One of the most difficult topics when learning English is irregular verbs. You can learn and practice irregular elephants with this simple app. Click and try it",
+        "link": "https://bedirgcmz-en-irregular-verbs.netlify.app/",
+        "github_link": "https://github.com/bedirgcmz/English-Irreguler-Verbs"
+      },
+      {
+        "id": 2,
+        "project_name": "Hangman",
+        "image": "hangman.jpg",
+        "info": "Don't make too many mistakes or the man will die :)",
+        "link": "https://bedirgcmz-hangman.netlify.app",
+        "github_link": "https://github.com/bedirgcmz/hangman"
+      },
+      {
+        "id": 3,
+        "project_name": "Rose Taxi",
+        "image": "roseTaxi.jpg",
+        "info": "A site I prepared and deployed for a client who operates a taxi. I created it with React",
+        "link": "https://www.rosetravel.co.uk/",
+        "github_link": "https://github.com/bedirgcmz/rose-taxi"
+      },
+      {
+        "id": 4,
+        "project_name": "SkyTech",
+        "image": "skyTech.jpg",
+        "info": "I created a site that I like very much using React + Vite for my client who organizes some courses for children.",
+        "link": "https://bedirgcmz-skytech.netlify.app/",
+        "github_link": "https://github.com/bedirgcmz/skyTech"
+      },
+      {
+        "id": 8,
+        "project_name": "Find Number",
+        "image": "findNumber.jpg",
+        "info": "Choose a level and start playing with your friend. Let's see who's lucky?",
+        "link": "https://bedirgcmz-find-number.netlify.app/",
+        "github_link": "https://github.com/bedirgcmz/find-number"
+      },
+      {
+        "id": 9,
+        "project_name": "Australian Zoo",
+        "image": "zoo.jpg",
+        "info": "Take a look at the Australia Zoo. Enjoy browsing the page with Recat",
+        "link": "https://bedirgcmz-zoo.netlify.app/",
+        "github_link": "https://github.com/bedirgcmz/react-zoo"
+      },
+      
+      {
+        "id": 11,
+        "project_name": "Multiplication Table Game",
+        "image": "multiplicationGame.jpg",
+        "info": "You can play the multiplication table game in this application. Remember that you have 10 seconds for each question. Add your name to the jersey and record your score at the end of the game. This app stores data in local storage. Click and try",
+        "link": "https://bedirgcmz-home-schoolng.netlify.app/",
+        "github_link": "https://github.com/bedirgcmz/home-schooling"
+      },
+      
+      {
+        "id": 13,
+        "project_name": "Chinese Horoscope",
+        "image": "chineseHoroscope.jpg",
+        "info": "Horoscopes are important to everyone. People want to know what the zodiac sign says. Chinese zodiac signs are especially interesting. It is possible to see animals and other elements that define you according to your birth year. Click and try",
+        "link": "https://bedirgcmz-chinese-horoscope.netlify.app/",
+        "github_link": "https://github.com/bedirgcmz/chinese-horoscope-calendar"
+      },
+      
+      {
+        "id": 14,
+        "project_name": "Simple Shopping",
+        "image": "simpleShopping.jpg",
+        "info": "First, you must add the products you have. Type the product name and click the ADD button. Use the + button to send the product to the other list. Or move all the products you added by clicking the >> / << buttons. Click and try",
+        "link": "https://bedirgcmz-simple-shopping.netlify.app/",
+        "github_link": "https://github.com/bedirgcmz/my_exercises/tree/master/simple_shopping"
+      },
+      {
+        "id": 15,
+        "project_name": "School Students",
+        "image": "classes.jpg",
+        "info": "I really like the SweetAlert package. I thought of a student table for a school. And while adding and deleting students, I responded with swwetalert. These are so sweet. Click and try",
+        "link": "https://bedirgcmz-school-students.netlify.app/",
+        "github_link": "https://github.com/bedirgcmz/school-students"
+      },
+      {
+        "id": 16,
+        "project_name": "Soup Rastaurant",
+        "image": "soupRestaurant.jpg",
+        "info": "Master Kerem has a restaurant. He hired a farm to make soup. He wants to instantly track how much soup she can make. That's why we wrote an app for it. Note that the master Kerem does not use pig's feet. Click and try",
+        "link": "https://bedirgcmz-soup-restaurant.netlify.app/",
+        "github_link": "https://github.com/bedirgcmz/soup-restaurant"
+      },
+      {
+        "id": 17,
+        "project_name": "Spend Money",
+        "image": "spendMoney.jpg",
+        "info": "In this React application, you are given some money. When you shop, your money runs out. Add or remove items from your shopping cart, or delete them all. You can see your cart with the button on the right. Click and try",
+        "link": "https://bedirgcmz-spend-money.netlify.app/",
+        "github_link": "https://github.com/bedirgcmz/spend-money"
+      },
+      
+      {
+        "id": 19,
+        "project_name": "Journey (For Swetzerland)",
+        "image": "journeySwitzerland.jpg",
+        "info": "Take a look at this site I made with the API that gives Switzerland's train times. If you're visiting Switzerland, type the names of two cities to see up-to-date travel information with this app. Click and try",
+        "link": "https://bedirgcmz-journey-swetzerland.netlify.app/",
+        "github_link": "https://github.com/bedirgcmz/journey-swetzerland"
+      },
+      {
+        "id": 20,
+        "project_name": "Where is Johan",
+        "image": "whereIsJohan.jpg",
+        "info": "Are you good at guessing? Here is a guessing game. Johan left the house and took a train. You have 4 rights to know which wagon you are in. If your guess is wrong, follow the clue given to you. Click and try",
+        "link": "https://bedirgcmz-where-is-johan.netlify.app/",
+        "github_link": "https://github.com/bedirgcmz/where-is-johan"
+      },
+      {
+        "id": 21,
+        "project_name": "Battery Simulation",
+        "image": "batterySimulation.jpg",
+        "info": "A battery charging and discharging simulation. Colors change according to battery level. As a bonus, a picture appears depending on the state of the battery. Click and try",
+        "link": "https://bedirgcmz-battery-simulation.netlify.app/",
+        "github_link": "https://github.com/bedirgcmz/battery-simulation"
+      },
+      {
+        "id": 22,
+        "project_name": "School Report",
+        "image": "schoolChart.jpg",
+        "info": "This application is designed for a school. You can see a separate list for each class. The individual grades of the students appear in the class lists. On the home page, class averages are shown with chart bars. Click and try",
+        "link": "https://bedirgcmz-school-report.netlify.app/",
+        "github_link": "https://github.com/bedirgcmz/school-report"
+      },
+      {
+        "id": 23,
+        "project_name": "Css - Mixed",
+        "image": "mixCss.jpg",
+        "info": "CSS is a really fun programming language. Writing CSS feels good. I did many CSS projects during my software learning process. No visuals were used in this project. All shapes are designed with css codes. Let's take a look.",
+        "link": "https://bedirgcmz-css-mixed.netlify.app/",
+        "github_link": "https://github.com/bedirgcmz/css-week6-img"
+      }
+]

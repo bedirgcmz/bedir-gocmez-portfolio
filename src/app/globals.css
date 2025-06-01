@@ -4,16 +4,16 @@
 @tailwind utilities;
 
 :root {
-  /* --color-active: #33bbc5; */
   --color-active: #1c8288;
   --color-hover: #ff8300;
   --color-hover-darker: #b95e00;
+  --color-active-darker: #1c8288;
+
 }
 .dark {
   --color-active: #ff8300;
   --color-active-darker: #b95e00;
   --color-hover: #1c8288;
-  /* --color-hover: #33bbc5; */
 }
 
 

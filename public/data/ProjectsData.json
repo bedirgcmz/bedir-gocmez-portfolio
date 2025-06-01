@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "project_name": "Meals",
+    "image": "meals.png",
+    "info": "You can log in to this application that I developed with The Meal DB, which is a great API, find a random meal, create a favorite list and search for a meal name if you want. (Fake user: 'Bedir', '123abc')",
+    "link": "https://bedirgcmz-meals.netlify.app/",
+    "github_link": "https://github.com/bedirgcmz/login"
+  },
+ 
+  {
+    "id": 2,
+    "project_name": "Music Player",
+    "image": "musicPlayer.png",
+    "info": "I'm a big fan of the Morphism design pattern! Recently, I created a music player using JS class structure, and I must say, I'm loving it. Give it a try yourself! 🎶",
+    "link": "https://bedirgcmz-musicplayer.netlify.app/",
+    "github_link": "https://github.com/bedirgcmz/music-player"
+  },
+  {
+    "id": 3,
+    "project_name": "Study English",
+    "image": "studyenglısh.png",
+    "info": "While learning English, write your own sentences and this application will color the area you want. Since the information is on localstroga, your work will not be lost",
+    "link": "https://bedirgcmz-study-english.netlify.app",
+    "github_link": "https://github.com/bedirgcmz/study-english"
+  },
+  {
+    "id": 4,
+    "project_name": "Get Images",
+    "image": "getPictures.png",
+    "info": "You can find pictures on any subject you want through this application, which uses an API.",
+    "link": "https://bedirgmz-get-pictures.netlify.app/",
+    "github_link": "https://github.com/bedirgcmz/API-assigment-4?tab=readme-ov-file"
+  },
+  {
+    "id": 5,
+    "project_name": "Bedir's Kitchen",
+    "image": "bedirsKitchen.png",
+    "info": "Working with NodeJs is quite enjoyable. This project was made entirely with NodeJs.",
+    "link": "https://bedirs-kitchen-ejs.onrender.com",
+    "github_link": "https://github.com/bedirgcmz/bedirs-kitchen-ejs"
+  },
+
+  
+  {
+    "id": 6,
+    "project_name": "To Do List",
+    "image": "todoList.png",
+    "info": "Maybe you have a lot of work to do and you forget about them. Here is an app to help you. Create a to-do list and delete it when you complete the task. If the missions are all finished, you can delete them all. I'm sure this will be of great help to you. Click and try",
+    "link": "https://bedirgcmz-todo-list.netlify.app/",
+    "github_link": "https://github.com/bedirgcmz/my_exercises/tree/master/to_do_list"
+  },
+  {
+    "id": 7,
+    "project_name": "Weather Condition",
+    "image": "weather.png",
+    "info": "You have important work to do today and you are wondering about the weather. You don't need to worry. With this application, you can instantly find out the weather forecast. All you have to do is type in your city and find it. Click and try",
+    "link": "https://bedirgcmz-weather-condition.netlify.app/",
+    "github_link": "https://github.com/bedirgcmz/weather_condition"
+  }
+]

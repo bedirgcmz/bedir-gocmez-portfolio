@@ -8,7 +8,7 @@ export default function Photo() {
 
   return (
       <div
-        className={`rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 ${
+        className={`rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 mt-[-100px] md:mt-0 ${
           styles.photoWrapper
         }`}
       >

@@ -1,0 +1,67 @@
+.card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card:hover {
+    transform: scale(0.85);
+    .cardHoverWrapper {
+        display: block;
+    }
+  }
+
+  /* Timeline css */
+.timelineWrapper {
+    height: 800px;
+    min-height: 100%;
+  }
+  
+  .timeline {
+    padding: 1rem 0;
+  }
+  
+  .arrow {
+    font-size: 1.25rem;
+    max-width: 10px;
+  }
+  .arrow1 {
+    top: 10px;
+    left: -22px;
+    transform: rotate(180deg);
+  }
+  .arrow2 {
+    top: 180px;
+    right: -22px;
+  }
+  .arrow3 {
+    top: 400px;
+    left: -22px;
+    transform: rotate(180deg);
+  }
+  .arrow4 {
+    top: 580px;
+    right: -22px;
+  }
+  
+  @media (max-width: 1024px) {
+    .arrow1, .arrow3 {
+        left: 54px;
+        transform: rotate(0deg);
+      }
+      .arrow1 {
+        top: 40px;
+      }
+      .arrow2 {
+        top: 260px;
+      }
+      .arrow3 {
+        top: 520px;
+      }
+      .arrow4 {
+        top: 800px;
+      }
+      .timelineWrapper {
+      height: 1000px;
+    }
+      
+  }

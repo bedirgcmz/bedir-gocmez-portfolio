@@ -15,8 +15,6 @@ type SocialItem = {
 const socialItems: SocialItem[] = [
   { icon: faLinkedin, url: 'https://linkedin.com/in/bedirgocmez' },
   { icon: faGithub, url: 'https://github.com/bedirgocmez' },
-  // { icon: faInstagram, url: 'https://instagram.com/bedirgocmez' },
-  // { icon: faXTwitter, url: 'https://twitter.com/bedirgocmez' },
 ];
 
 const SocialMediaIcon = ({ icon, url }: SocialItem) => (
