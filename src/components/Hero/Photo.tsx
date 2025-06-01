@@ -4,7 +4,7 @@ import styles from './HeroSection.module.css';
 import { useTheme } from '@/context/ThemeContext';
 
 export default function Photo() {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
       <div
