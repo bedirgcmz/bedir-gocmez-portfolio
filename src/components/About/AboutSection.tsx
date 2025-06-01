@@ -5,6 +5,7 @@ import HireMeButton from './HireMeButton';
 import styles from './About.module.css';
 import CardImages from './CardImages';
 import WhoIAm from './WhoIAm';
+import References from '../References/References';
 
 export default function AboutSection() {
   return (
@@ -18,6 +19,7 @@ export default function AboutSection() {
         <Info />
         <CardImages />
       </div>
+      <References />
     </section>
   );
 }

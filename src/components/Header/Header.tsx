@@ -111,7 +111,7 @@ export default function Header() {
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         } ${theme === 'dark' ? 'bg-primary text-white' : 'bg-white text-black'} shadow-lg p-6`}
       >
-        <button onClick={() => setIsMenuOpen(false)} className='absolute top-[44px] left-[25px]'>
+        <button onClick={() => setIsMenuOpen(false)} className='absolute top-[44px] left-[25px]' aria-label='Close Navbar'>
             <FontAwesomeIcon icon={faCircleXmark} className='h-[27px]'/>
         </button>
         <ul className={styles.nav}>{renderNavLinks({ navItems, activeHash, onClick: handleLinkClick })}
