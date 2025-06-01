@@ -6,7 +6,7 @@ import Timeline from "./Timeline";
 const ExperienceSection: React.FC = () => {
   return (
     <section
-      className="py-12 min-h-[1200px] px-4 md:px-16 lg:px-24 flex flex-col items-center"
+      className="py-12 min-h-[1020px] md:min-h-[900px] px-4 md:px-16 lg:px-24 flex flex-col items-center"
       aria-label="Work and teaching experiences timeline"
     >
 

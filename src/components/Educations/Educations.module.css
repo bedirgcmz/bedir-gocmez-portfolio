@@ -1,0 +1,107 @@
+/* Educations.module.css */
+.wrapper {
+    padding: 2rem 1rem;
+  }
+  .heading {
+    @apply text-2xl font-bold text-center mb-8;
+  }
+  .cardWrapper {
+    @apply flex flex-col max-w-[1200px] m-auto md:flex-row flex-wrap gap-6 md:gap-8 items-center justify-center;
+  }
+  /* .card {
+    @apply flex items-start gap-4 min-w-[320px] w-[420px] h-[200px] relative bg-white dark:bg-zinc-800 p-4 rounded-lg shadow-lg transition-all duration-300;
+  
+  
+    transform: perspective(1000px) rotateX(12deg) rotateY(-8deg) rotateZ(-4deg);
+    transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: tiltFloat 5s infinite ease-in-out;
+    z-index: 1;
+  }
+  
+  .card:hover {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    animation: none;
+    z-index: 10;
+  }
+  
+  @keyframes tiltFloat {
+    0% {
+      transform: perspective(1000px) rotateX(12deg) rotateY(-8deg) rotateZ(-4deg);
+    }
+    50% {
+      transform: perspective(1000px) rotateX(8deg) rotateY(-4deg) rotateZ(-2deg);
+    }
+    100% {
+      transform: perspective(1000px) rotateX(12deg) rotateY(-8deg) rotateZ(-4deg);
+    }
+  } */
+
+  .card {
+    @apply flex items-start gap-4 w-[420px] h-[200px] relative bg-white dark:bg-zinc-800 p-4 rounded-lg shadow-lg;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .iconBoxLeft {
+    @apply p-2 rounded-full bg-[var(--color-hover)];
+    color: rgb(217, 214, 214);
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 55px;
+    line-height: 14px;
+    border-radius: 6px 0 60px 0;
+  }
+  .iconBox {
+    @apply p-2 rounded-full bg-[var(--color-active)];
+    color: white;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 55px;
+    height: 55px;
+    border-radius: 60px 0 6px 0;
+    text-align: end;
+    line-height: 52px;
+  }
+  .content {
+    @apply flex flex-col h-full justify-between items-start;
+    div {
+        z-index: 2;
+    }
+  }
+  .title {
+    @apply font-bold text-lg text-gray-600;
+
+  }
+  .company {
+    @apply text-sm text-gray-500 dark:text-gray-300;
+  }
+  .desc {
+    @apply mt-2 text-sm text-gray-500 dark:text-gray-600;
+  }
+  .date {
+    @apply mt-1 text-xs text-[var(--color-active)];
+  }
+  .loaderWrapper {
+    @apply flex flex-col max-w-[1200px] m-auto md:flex-row flex-wrap gap-6 md:gap-8 items-center justify-center;
+  }
+  .skeletonCard {
+    @apply flex items-start gap-4 w-[420px] h-[200px] relative bg-white dark:bg-zinc-800 p-4 rounded-lg shadow-lg;
+    /* height: 120px;
+    border-radius: 0.75rem; */
+    background: linear-gradient(90deg, #ccc 25%, #e0e0e0 50%, #ccc 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite;
+  }
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  

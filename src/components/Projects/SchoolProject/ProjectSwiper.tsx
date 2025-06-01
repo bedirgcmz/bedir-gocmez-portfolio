@@ -56,7 +56,8 @@ export default function ProjectSwiper() {
               }}
               navigation={true}
               autoplay={{ delay: 3000, pauseOnMouseEnter : true }}
-                className="rounded-lg"
+              className="rounded-lg"
+              style={{ paddingBottom: '20px' }}
       >
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
