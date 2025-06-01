@@ -12,7 +12,7 @@ import styles from './References.module.css';
 
 type Reference = {
   name: string;
-  title: string;
+  role: string;
   quote: string;
   image: string;
   stars: number;

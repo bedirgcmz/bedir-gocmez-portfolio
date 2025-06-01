@@ -15,7 +15,7 @@ export default function AboutSection() {
       }`}
     >
       <WhoIAm />
-      <div className='flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12 lg:gap-24'>
+      <div className='flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12 lg:gap-24 mt-20'>
         <Info />
         <CardImages />
       </div>

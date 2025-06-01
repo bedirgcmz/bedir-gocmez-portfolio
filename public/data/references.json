@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Mathias H. Fredlund",
-        "role": "Lead Frontend Developer",
+        "role": "CTO & Tech leader",
         "quote": "Bedir showed curiosity, discipline, and fast adaptation in our project at FutureGames. He took responsibility and grew steadily as a developer.",
         "image": "/images/mathias.jpeg",
         "stars": 5
@@ -10,7 +10,7 @@
     {
         "id": 2,
         "name": "Rob Chamberlain",
-        "role": "Program Instructor at FutureGames",
+        "role": "Head Teacher FrontEnd Development",
         "quote": "Bedir is an exceptionally engaged and fast-learning student. His strong frontend skills and collaborative spirit made him a great asset.",
         "image": "/images/rob.jpeg",
         "stars": 5
@@ -18,7 +18,7 @@
     {
         "id": 3,
         "name": "Tove Lundell",
-        "role": "Supervisor at Custellence",
+        "role": "Growth Marketing Manager",
         "quote": "During his internship, Bedir displayed professionalism, a willingness to learn, and the ability to handle tasks independently and effectively.",
         "image": "/images/tove.jpeg",
         "stars": 5
