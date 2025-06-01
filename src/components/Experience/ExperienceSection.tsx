@@ -27,7 +27,7 @@ const ExperienceSection: React.FC = () => {
             company="Futuregames"
             role="Frontend / App Developer"
             description="Built apps with React, TypeScript, Tailwind & Next.js. Used Agile methods and CMS tools."
-            date="Jan 2023 – Present"
+            date="Jan 2023 – Jul 2025"
             iconClass="fa-solid fa-building"
             direction="left"
             delay={0.4}
