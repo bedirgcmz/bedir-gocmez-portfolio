@@ -38,7 +38,6 @@ const skills = [
   ];
 
   const SkillsSection = () => {
-    // Grupları manuel olarak oluşturuyoruz, UI düzenine göre
     const profesionalGroups = [
       [skills[0]],
       [skills[1], skills[2]],

@@ -30,7 +30,6 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
     visible: {
       opacity: 1,
       x: 0,
-    //   transition: {  type: "spring", stiffness: 160, damping: 7 },
       transition: { type: "spring", delay, duration: 0.7 },
     },
   };

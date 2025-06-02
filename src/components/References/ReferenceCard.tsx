@@ -1,4 +1,3 @@
-// components/ReferenceCard.tsx
 import Image from 'next/image';
 import styles from './References.module.css';
 

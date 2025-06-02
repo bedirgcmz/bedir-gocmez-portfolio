@@ -69,9 +69,7 @@ export default function Educations() {
       {loading ? (
         <div className={styles.loaderWrapper}>
           {[1, 2, 3, 4].map((n) => (
-            // <div className='flex flex-col max-w-[1200px] m-auto md:flex-row flex-wrap gap-6 md:gap-8 items-center justify-center;'>
                 <div key={n} className={styles.skeletonCard}></div>
-            // </div> 
           ))}
         </div>
       ) : (
@@ -80,9 +78,6 @@ export default function Educations() {
             <motion.div
               key={edu.id}
               aria-label={`Education at ${edu.company}`}
-            //   initial={{ opacity: 0, x: -40, scale: 0.95 }}
-            //   whileInView={{ opacity: 1, x: 0, scale: 1 }}
-            //   transition={{ duration: 0.6, delay: index * 0.1 }}
             variants={tiltVariants}
             initial="initial"
             animate="float"

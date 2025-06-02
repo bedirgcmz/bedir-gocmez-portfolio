@@ -1,7 +1,6 @@
 'use client';
 
 import { Typewriter } from 'react-simple-typewriter';
-// import 'react-simple-typewriter/dist/index.css';
 
 type Props = {
   words: string[];

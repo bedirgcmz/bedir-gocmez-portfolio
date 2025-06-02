@@ -1,4 +1,3 @@
-// components/ProjectCard.tsx
 import styles from './ProjectCard.module.css';
 
 type Props = {

@@ -14,7 +14,7 @@ export default function ContactForm() {
     e.preventDefault();
 
     if (!formRef.current) return;
-        //          service id        template id         obje         public id
+        {/*          service id        template id         obje         public id */}
         emailjs.sendForm("service_w21zl4c", "template_4y8tcvh", formRef.current, "m2Y_XycLwC6X2Pz8M")
         .then(() => {
             toast.success("Message sent successfully!", { position: "bottom-right" });

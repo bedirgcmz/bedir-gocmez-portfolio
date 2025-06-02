@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
-
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';

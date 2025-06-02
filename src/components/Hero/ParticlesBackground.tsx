@@ -10,14 +10,14 @@ export default function ParticlesBackground() {
   const { theme } = useTheme();
   const [init, setInit] = useState(false);
 
-  // tsParticles motoru 1 kere yüklenmeli
+  // tsParticles engine once load 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => setInit(true));
   }, []);
 
-  // theme değişse de her seferinde aynı base yapı döner
+  // For rach theme same options 
   const options: ISourceOptions = useMemo(() => ({
     fullScreen: { enable: false, zIndex: -1 },
     background: {

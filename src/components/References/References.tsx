@@ -1,4 +1,3 @@
-// components/References.tsx
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -31,8 +30,7 @@ export default function References() {
   return (
     <section className={styles.section} aria-labelledby="references-title">
       <h2 id="references-title text-2xl" className={styles.sectionTitle}>What People Say</h2>
-      // eslint-disable-next-line react/no-unescaped-entities
-      <p className={styles.subtitle}>Reliable, adaptable, and valued — here's what others think.</p>
+      <p className={styles.subtitle}>Reliable, adaptable, and valued — here&#39;s what others think.</p>
 
       {!references ? (
         <div className={styles.loadingWrapper}>
