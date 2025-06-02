@@ -52,7 +52,7 @@ export default function References() {
           navigation
           autoplay={{ delay: 4000, pauseOnMouseEnter: true }}
           className="rounded-lg"
-          style={{ paddingBottom: '40px' }}
+          style={{ paddingBottom: '40px', padding: '20px' }}
         >
           {references.map((ref, i) => (
             <SwiperSlide key={i}>
