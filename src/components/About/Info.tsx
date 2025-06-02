@@ -4,7 +4,7 @@ export default function Info() {
   return (
     <div className="flex-1">
       <h2
-        className={`text-3xl text-[#1c8288] dark:text-white md:text-3xl font-extrabold mb-6 transition-colors duration-300 ${
+        className={`text-3xl text-[#1a7b81] dark:text-white md:text-3xl font-extrabold mb-6 transition-colors duration-300 ${
           styles.nameTitle
         }`}
       >

@@ -21,9 +21,9 @@ export default function ReferenceCard({ name, role, quote, image, stars }: Props
         />
         <div className={styles.card} aria-label={`Reference from ${name}`}>
         <div>
-            <h3 className={styles.name}>{name}</h3>
-            <p className={styles.role}>{role}</p>
-            <p className={styles.summary}>{quote}</p>
+            <h3 className={`${styles.name} max-xs:text-[16px]`}>{name}</h3>
+            <p className={`${styles.role}  max-xs:text-[14px]`}>{role}</p>
+            <p className={`${styles.summary} max-xs:text-[12px]`}>{quote}</p>
             <div className={styles.stars}>
             {Array.from({ length: stars }).map((_, i) => (
                 <span key={i}>⭐</span>

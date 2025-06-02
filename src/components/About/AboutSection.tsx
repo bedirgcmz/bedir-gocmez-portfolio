@@ -8,7 +8,7 @@ import References from '../References/References';
 export default function AboutSection() {
   return (
     <section
-      className={`flex flex-col items-center justify-between px-4 mt-16 max-w-[1100px] mx-auto gap-12 transition-colors duration-300 ${
+      className={`flex flex-col items-center justify-between px-6 mt-16 max-w-[1100px] mx-auto gap-12 transition-colors duration-300 ${
         styles.aboutSection
       }`}
     >

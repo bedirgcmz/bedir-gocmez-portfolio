@@ -10,7 +10,7 @@ type Props = {
 
 export default function ProjectCard({ image, project_name, info, link, github_link }: Props) {
   return (
-    <div className={`bg-white h-[90%] mb-auto mt-[20px] border border-[#1c8288] dark:border-white dark:bg-[#004046] rounded-lg overflow-hidden shadow-lg p-4 flex flex-col gap-4 ${styles.card}`}>
+    <div className={`bg-white h-[90%] mb-auto mt-[20px] border border-[#1a7b81] dark:border-white dark:bg-[#004046] rounded-lg overflow-hidden shadow-lg p-4 flex flex-col gap-4 ${styles.card}`}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={`/images/projects/${image}`}

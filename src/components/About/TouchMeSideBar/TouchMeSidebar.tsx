@@ -17,7 +17,7 @@ const socials = [
 
 export default function TouchMeSidebar() {
   return (
-    <div className={` md:flex flex-col items-center md:me-[60px] lg:me-[100px] text-[var(--color-active)] dark:text-[var(--color-active-darker)] ${styles.sidebar}`}>
+    <div className={` md:flex px-4 md:px-0 flex-col items-center md:me-[60px] lg:me-[100px] text-[var(--color-active)] dark:text-[var(--color-active-darker)] ${styles.sidebar}`}>
       <span className={styles.text}>Touch</span>
       <span className={`${styles.line} bg-[var(--color-active)] dark:bg-[var(--color-active-darker)]`}></span>
       <span className={`${styles.circle} bg-[var(--color-active)] dark:bg-[var(--color-active-darker)]`}></span>

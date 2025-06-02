@@ -22,7 +22,7 @@ export default function ParticlesBackground() {
     fullScreen: { enable: false, zIndex: -1 },
     background: {
       color: {
-        value: theme === 'dark' ? '#004046' : '#ffffff',
+        value: theme === 'dark' ? '#004046' : '#F9F5F2',
       },
     },
     particles: {

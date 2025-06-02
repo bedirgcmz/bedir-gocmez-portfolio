@@ -55,11 +55,11 @@ export default function Header() {
 
   return (
     <header
-      className={`w-full fixed top-0 z-50 transition-colors duration-300 max-w-[100vw] ${
-        theme === 'dark' ? 'bg-primary text-white' : 'bg-white text-black'
+      className={`w-screen fixed top-0 z-50 transition-colors duration-300 max-w-[100vw] ${
+        theme === 'dark' ? 'bg-primary text-white' : 'bg-[#F9F5F2] text-gray-700'
       } ${styles.header}`}
     >
-      <div className="max-w-[1600px] mx-auto px-8 py-3 flex justify-between items-center">
+      <div className="max-w-[1600px] mx-auto px-2 sm:px-4 max-xs:px-1 tablet-only:px-1 py-3 flex justify-between items-center">
         <div className="flex items-center gap-3">
           <Image
             src="/images/profile-logo.jpeg"
@@ -73,14 +73,14 @@ export default function Header() {
             <p className={`${styles.title} dark:text-[#ff8000]`}>Frontend Developer</p>
           </div>
         {/* Desktop Nav */}
-        <nav className={`hidden lg:flex ${styles.nav} ms-6`}>
-          <ul className="flex gap-4">{renderNavLinks({ navItems, activeHash })}</ul>
+        <nav className={`hidden lg:flex ${styles.nav} ms-6 tablet-only:ms-2`}>
+          <ul className="flex gap-4 tablet-only:gap-2">{renderNavLinks({ navItems, activeHash })}</ul>
         </nav>
         </div>
 
 
         {/* Right Section */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 tablet-only:gap-2">
           <span className='hidden sm:inline-block'><Download /></span>
           <ThemeToggle />
           <button
@@ -107,8 +107,8 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <nav
-        className={`md:hidden fixed top-0 right-0 w-2/5 z-50 transition-transform duration-300 transform ${
-          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`md:hidden fixed top-0 right-0 w-[min(80vw,260px)] h-screen z-50 transition-transform duration-300 transform ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-[100vw]'
         } ${theme === 'dark' ? 'bg-primary text-white' : 'bg-white text-black'} shadow-lg p-6`}
       >
         <button onClick={() => setIsMenuOpen(false)} className='absolute top-[44px] left-[25px]' aria-label='Close Navbar'>

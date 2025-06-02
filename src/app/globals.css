@@ -6,25 +6,25 @@
 :root {
   --font-main: var(--font-inter);
   --font-accent: var(--font-space);
-  --color-active: #1c8288;
+  --color-active: #1a7b81;
   --color-hover: #ff8300;
-  --color-hover-darker: #b95e00;
-  --color-active-darker: #1c8288;
-  --color-lighter: #b95e00;
+  --color-hover-darker: #af5900;
+  --color-active-darker: #1a7b81;
+  --color-lighter: #af5900;
 
 }
 .dark {
   --color-active: #ff8300;
-  --color-active-darker: #b95e00;
-  --color-hover: #1c8288;
-  --color-hover-darker: #1c8288;
+  --color-active-darker: #af5900;
+  --color-hover: #1a7b81;
+  --color-hover-darker: #1a7b81;
   --color-lighter: #23b3bb;
 
 }
 
 
 body {
-  @apply bg-white text-black transition-colors duration-300;
+  @apply bg-[#F9F5F2] text-[gray-700] transition-colors duration-300;
   font-family: var(--font-main), sans-serif;
 }
 

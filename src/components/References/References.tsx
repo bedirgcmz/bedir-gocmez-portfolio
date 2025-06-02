@@ -43,7 +43,7 @@ export default function References() {
           modules={[Pagination, Navigation, Autoplay]}
           breakpoints={{
             0: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
+            769: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
           spaceBetween={30}

@@ -16,3 +16,9 @@
     font-size: 27px;
     }
   }
+
+  @media (mxn-width: 413px) {
+    .title {
+    font-size: 25px;
+    }
+  }

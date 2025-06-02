@@ -13,7 +13,7 @@ export default function WhoIAm() {
         <div className='max-w-[670px] relative'>
             <h2
                 id="who-i-am-heading"
-                className="text-3xl md:text-4xl font-bold mb-4 text-[#1c8288] dark:text-white z-[2]"
+                className="text-3xl md:text-4xl font-bold mb-4 text-[#1a7b81] dark:text-white z-[2]"
             >
                 Who I Am
             </h2>

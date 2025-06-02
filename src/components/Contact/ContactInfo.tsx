@@ -10,7 +10,7 @@ export default function ContactInfo() {
       <h2 id="contact-heading" className={styles.heading}>
         Let&rsquo;s Talk
       </h2>
-      <p className={`${styles.description} text-gray-500 dark:text-gray-400`}>
+      <p className={`${styles.description} text-gray-600 dark:text-gray-400`}>
         Do you have a project in mind or just want to say hello? I’m always open to new ideas, collaboration, or simply a friendly chat.
       </p>
       <a href="mailto:bedirgocmez@gmail.com" className={styles.emailLink} aria-label="Send email to Bedir Gocmez">

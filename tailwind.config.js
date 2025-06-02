@@ -4,6 +4,10 @@ module.exports = {
 darkMode: 'class',
   theme: {
     extend: {
+      screens: {
+        'max-xs': { max: '376px' },
+        'tablet-only': { min: '768px', max: '950px' },
+      },
       colors: {
         primary: '#004046', // koyu yeşil (dark bg)
         secondary: '#006064', // koyu mavi-yeşil tonu
