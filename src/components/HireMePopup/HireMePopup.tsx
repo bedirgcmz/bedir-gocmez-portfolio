@@ -76,6 +76,7 @@ const HireMePopup = () => {
           >
             <FontAwesomeIcon icon={faXmark} />
           </button>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
                 className={styles.hireMeBgImg} 
                 src={"/images/hiremebg2.png" }

@@ -1,8 +1,8 @@
 "use client"
-import { motion } from 'framer-motion';
+import { AnimationControls, motion } from 'framer-motion';
 import ProjectSwiper from './ProjectSwiper';
 
-export default function SchoolProjects({ controls }: { controls: any }) {
+export default function SchoolProjects({ controls }: { controls: AnimationControls }) {
   return (
     <section className="min-h-[500px] bg-[--color-bg] py-10 mt-16">
       <h1 className="text-center text-xl text-[var(--color-lighter)]">Some of School&#39;s Projects</h1>

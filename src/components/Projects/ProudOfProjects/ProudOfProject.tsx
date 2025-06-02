@@ -80,6 +80,7 @@ const ProudOfProjects = () => {
               {screenWidth ? 'Click me!' : 'Hover me!'}
             </p>
             <div className={styles.imageContainer}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={`/images/proudProjects/${project.url}.jpg`} alt={project.alt} />
             </div>
             <div className={styles.details}>
