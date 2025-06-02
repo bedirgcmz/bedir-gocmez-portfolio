@@ -8,33 +8,33 @@ import { useInView } from 'react-intersection-observer';
 
 
 const skills = [
-    { url: '/images/icons/js.png', skillName: 'JavaScript', padding: 18 },
-    { url: '/images/icons/nextjs.png', skillName: 'Next.js', padding: 22 },
-    { url: '/images/icons/typescript.png', skillName: 'TypeScript', padding: 20 },
-    { url: '/images/icons/html.png', skillName: 'HTML5', padding: 16 },
-    { url: '/images/icons/css.png', skillName: 'CSS3', padding: 16 },
-    { url: '/images/icons/tailwind.webp', skillName: 'Tailwind', padding: 24 },
-    { url: '/images/icons/bootstrap.png', skillName: 'Bootstrap', padding: 18 },
-    { url: '/images/icons/react.png', skillName: 'React', padding: 20 },
-    { url: '/images/icons/figma.png', skillName: 'Figma', padding: 18 },
-    { url: '/images/icons/git.png', skillName: 'Git - Github', padding: 18 },
-    { url: '/images/icons/mysql.png', skillName: 'MySQL', padding: 20 },
-    { url: '/images/icons/nodejs.png', skillName: 'Node.js', padding: 16 },
-    { url: '/images/icons/expressjs.png', skillName: 'ExpressJs', padding: 22 },
-    { url: '/images/icons/mongodb.png', skillName: 'MongoDB', padding: 20 },
-    { url: '/images/icons/docker.png', skillName: 'Docker', padding: 22 },
-    { url: '/images/icons/postman.png', skillName: 'Postman', padding: 20 },
+    { url: '/images/icons/js.png', skillName: 'JavaScript', padding: 18, progress: 90 },
+    { url: '/images/icons/nextjs.png', skillName: 'Next.js', padding: 22, progress: 90 },
+    { url: '/images/icons/typescript.png', skillName: 'TypeScript', padding: 20, progress: 90 },
+    { url: '/images/icons/html.png', skillName: 'HTML5', padding: 16, progress: 95 },
+    { url: '/images/icons/css.png', skillName: 'CSS3', padding: 16, progress: 95 },
+    { url: '/images/icons/tailwind.webp', skillName: 'Tailwind', padding: 24, progress: 95 },
+    { url: '/images/icons/bootstrap.png', skillName: 'Bootstrap', padding: 18, progress: 95 },
+    { url: '/images/icons/react.png', skillName: 'React', padding: 20, progress: 95 },
+    { url: '/images/icons/figma.png', skillName: 'Figma', padding: 18, progress: 75 },
+    { url: '/images/icons/git.png', skillName: 'Git - Github', padding: 18, progress: 90 },
+    { url: '/images/icons/mysql.png', skillName: 'MySQL', padding: 20, progress: 60 },
+    { url: '/images/icons/nodejs.png', skillName: 'Node.js', padding: 16, progress: 80 },
+    { url: '/images/icons/expressjs.png', skillName: 'ExpressJs', padding: 22, progress: 40 },
+    { url: '/images/icons/mongodb.png', skillName: 'MongoDB', padding: 20, progress: 40 },
+    { url: '/images/icons/docker.png', skillName: 'Docker', padding: 22, progress: 50 },
+    { url: '/images/icons/postman.png', skillName: 'Postman', padding: 20, progress: 90 },
   ];
 
   const personalSkills = [
-    { url: '/images/personalSkillIcons/adaptability.png', skillName: 'Adaptability', padding: 20 },
-    { url: '/images/personalSkillIcons/communication.png', skillName: 'Communication', padding: 18 },
-    { url: '/images/personalSkillIcons/creative.png', skillName: 'Creative Thinking', padding: 20 },
-    { url: '/images/personalSkillIcons/dog-lover.png', skillName: 'Dog Lover 🐶', padding: 22 },
-    { url: '/images/personalSkillIcons/fast-learner.png', skillName: 'Fast Learner', padding: 20 },
-    { url: '/images/personalSkillIcons/problem-solving.png', skillName: 'Problem Solving', padding: 20 },
-    { url: '/images/personalSkillIcons/stress-management.png', skillName: 'Stress Management', padding: 18 },
-    { url: '/images/personalSkillIcons/team-work.png', skillName: 'Teamwork', padding: 18 },
+    { url: '/images/personalSkillIcons/adaptability.png', skillName: 'Adaptability', padding: 20, progress: 90 },
+    { url: '/images/personalSkillIcons/communication.png', skillName: 'Communication', padding: 18, progress: 90 },
+    { url: '/images/personalSkillIcons/creative.png', skillName: 'Creative Thinking', padding: 20, progress: 90 },
+    { url: '/images/personalSkillIcons/dog-lover.png', skillName: 'Dog Lover 🐶', padding: 22, progress: 90 },
+    { url: '/images/personalSkillIcons/fast-learner.png', skillName: 'Fast Learner', padding: 20, progress: 90 },
+    { url: '/images/personalSkillIcons/problem-solving.png', skillName: 'Problem Solving', padding: 20, progress: 90 },
+    { url: '/images/personalSkillIcons/stress-management.png', skillName: 'Stress Management', padding: 18, progress: 90 },
+    { url: '/images/personalSkillIcons/team-work.png', skillName: 'Teamwork', padding: 18, progress: 90 },
   ];
 
   const SkillsSection = () => {
@@ -66,18 +66,8 @@ const skills = [
   
     return (
       <section className="mt-12 relative max-w-[1200px] m-auto">
+          {/* Profesional Skills Start*/}
         <div className='relative'>
-            {/* Profesional Skills Start*/}
-            {/* <div className="absolute top-1/2 left-1/2 w-[30%] max-w-[500px] aspect-square -translate-x-1/2 -translate-y-1/2">
-                <Image 
-                src="/images/skills1.png"
-                alt="Professional Skills"
-                fill
-                className="object-contain"
-                sizes="(max-width: 1140px) 60vw, 300px"
-                priority
-                />
-            </div> */}
             <AnimatedSkillCircle
                 url="/images/skills1.png"
                 alt="Professional Skills"
@@ -96,6 +86,7 @@ const skills = [
                     key={`${index}-${i}`}
                     url={item.url}
                     skill={item.skillName}
+                    progress={item.progress}
                     showCirkle={true}
                 />
                 ))}
@@ -106,17 +97,6 @@ const skills = [
 
             {/* Personal Skills Start*/}
             <div className='relative mt-40'> 
-                {/* <div className="absolute top-1/2 left-1/2 w-[30%] max-w-[500px] aspect-square -translate-x-1/2 -translate-y-1/2">
-                    <Image 
-                    src="/images/skills2.png"
-                    alt="Professional Skills"
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 1140px) 40vw, 300px"
-                    priority
-                    />
-                </div> */}
-                
                     <AnimatedSkillCircle url="/images/skills2.png" alt="Personal Skills" />
                     {personalGroups.map((group, index) => (
                     <div
@@ -132,6 +112,7 @@ const skills = [
                             key={`${index}-${i}`}
                             url={item.url}
                             skill={item.skillName}
+                            progress={item.progress}
                             showCirkle={false}
                         />
                         ))}
@@ -157,7 +138,7 @@ type AnimatedSkillCircleProps = {
     return (
         <div
           ref={ref}
-          className="absolute top-1/2 left-1/2 w-[30%] max-w-[500px] aspect-square -translate-x-1/2 -translate-y-1/2"
+          className="absolute top-1/2 left-1/2 w-[23%] sm:w-[30%] max-w-[500px] aspect-square -translate-x-1/2 -translate-y-1/2"
         >
           <motion.div
             initial={{ scale: 0 }}

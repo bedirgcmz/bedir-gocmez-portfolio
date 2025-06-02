@@ -6,6 +6,7 @@ darkMode: 'class',
     extend: {
       screens: {
         'max-xs': { max: '376px' },
+        'max-xxs': { max: '360px' },
         'tablet-only': { min: '768px', max: '950px' },
       },
       colors: {

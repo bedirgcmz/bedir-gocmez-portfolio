@@ -17,8 +17,13 @@
     }
   }
 
-  @media (mxn-width: 413px) {
+  @media (max-width: 413px) {
     .title {
     font-size: 25px;
+    }
+  }
+  @media (max-width: 376px) {
+    .title {
+    font-size: 22px;
     }
   }

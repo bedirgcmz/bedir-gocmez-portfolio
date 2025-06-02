@@ -50,7 +50,7 @@ export default function References() {
           loop
           pagination={{ clickable: true }}
           navigation
-          autoplay={{ delay: 4000, pauseOnMouseEnter: true }}
+        //   autoplay={{ delay: 4000, pauseOnMouseEnter: true }}
           className="rounded-lg"
           style={{ paddingBottom: '40px', padding: '20px' }}
         >

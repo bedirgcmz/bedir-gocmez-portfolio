@@ -36,7 +36,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
 
   return (
     <motion.article
-      className={`relative rounded-md shadow-md max-xs:w-[226px] w-[310px] sm:w-[380px] max-w-md bg-white dark:bg-zinc-800 text-gray-800 dark:text-gray-200  ${styles.card}`}
+      className={`relative rounded-md shadow-md max-xs:w-[270px] w-[310px] sm:w-[380px] max-w-md bg-white dark:bg-zinc-800 text-gray-800 dark:text-gray-200  ${styles.card}`}
       initial="hidden"
       whileInView="visible"
       variants={animation}
@@ -51,8 +51,8 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
         <span>{company}</span>
       </header>
       <div className="px-4 py-3 bg-white text-gray-500 h-[135px]">
-        <h3 className="font-bold text-lg flex items-center gap-2">{role}</h3>
-        <p className="text-sm mt-2">{description}</p>
+        <h3 className="font-bold text-lg flex items-center gap-2 max-xs:text-[16px]">{role}</h3>
+        <p className="text-sm mt-2 max-xs:text-[12px]">{description}</p>
       </div>
       <footer className="bg-[var(--color-hover)] text-white text-sm py-1 px-2 text-center rounded-b-md font-semibold">
         {date}

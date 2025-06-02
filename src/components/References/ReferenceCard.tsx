@@ -11,7 +11,7 @@ type Props = {
 
 export default function ReferenceCard({ name, role, quote, image, stars }: Props) {
   return (
-    <div className='relative pt-[100px]'>
+    <div className='relative pt-[60px]'>
         <Image
             src={`${image}`}
             alt={`${name}'s profile`}

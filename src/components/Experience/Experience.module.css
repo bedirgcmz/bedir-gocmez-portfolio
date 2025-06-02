@@ -65,3 +65,9 @@
     }
       
   }
+
+  @media (max-width: 640px) {
+    .arrow1, .arrow2, .arrow3, .arrow4 {
+      left: 42px;
+    }
+  }
