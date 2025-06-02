@@ -11,7 +11,7 @@ import HireMePopup from "@/components/HireMePopup/HireMePopup";
 import ProjectSection from "@/components/Projects/ProjectSection";
 import SectionTitle from "@/components/SectionTitle/SectionTitle";
 import SkillsSection from "@/components/Skills/Skills/SkillsSection";
-import { faCode, faIdCard, faCubes, faUserGraduate, faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faIdCard, faCubes, faUserGraduate, faBriefcase,faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
   return (
@@ -34,7 +34,7 @@ export default function Home() {
       <SectionTitle text="What I’ve Learned" icon={faUserGraduate} />
       <Educations />
       <DividerCircle sectionId="contact"/>
-      <SectionTitle text="Contact Me" icon={faUserGraduate} />
+      <SectionTitle text="Contact Me" icon={faEnvelope} />
       <ContactSection />
       <Footer />
       <HireMePopup />
