@@ -65,8 +65,7 @@ const HireMePopup = () => {
       aria-labelledby="hire-me-heading"
     >
       <div className={styles.animation}>
-        <div 
-          className={styles.popupContainer} 
+        <div className={styles.popupContainer} 
           onClick={(e) => e.stopPropagation()}
         >
           <button 
@@ -76,12 +75,20 @@ const HireMePopup = () => {
           >
             <FontAwesomeIcon icon={faXmark} />
           </button>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img 
-                className={styles.hireMeBgImg} 
-                src={"/images/hiremebg2.png" }
-                alt="Hire me background"
-            />
+            <div className={styles.hireMeBgImgContainer} >
+              <Image 
+                  className="" 
+                  src={"/images/hiremebg2.png"} 
+                  alt="Hire me button" 
+                  fill
+                  style={{
+                    objectFit: 'cover', 
+                    objectPosition: 'center',
+                  }}
+                  quality={100}
+                  priority
+                  />
+            </div>
         
           <div className={styles.popupContent}>
             <h2 id="hire-me-heading" className="sr-only">Hire Me</h2>
