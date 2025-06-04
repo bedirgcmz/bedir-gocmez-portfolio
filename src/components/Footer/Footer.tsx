@@ -3,6 +3,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import styles from './Footer.module.css';
+import VisitorCount from '../VisitorCount/VisitorCount';
 
 const navItems = ['About', 'Skills', 'Projects', 'Experiences', 'Educations', 'Contact'];
 
@@ -44,6 +45,7 @@ export default function Footer() {
         {/* Right: Copyright */}
         <div className={styles.copyright}>
           <p>&copy; 2025 Bedir Gocmez. Crafted with ❤️ using Next.js</p>
+          {/* <VisitorCount /> */}
         </div>
       </div>
     </footer>
