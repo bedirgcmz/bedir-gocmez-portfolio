@@ -1,4 +1,4 @@
-import { headers } from 'next/headers';
+import { cookies } from 'next/headers';
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from '@/context/ThemeContext'
@@ -18,14 +18,30 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const headersList = await headers();
-  const theme = headersList.get('x-theme') === 'light' ? 'light' : 'dark';
+  const cookieStore = cookies();
+  const theme = (await cookieStore).get('theme-bdr-portfolio')?.value as 'light' | 'dark' || 'dark';
 
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} ${theme}`}>
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var theme = localStorage.getItem('theme-bdr-portfolio');
+                  var mode = theme === 'light' ? 'light' : 'dark';
+                  document.documentElement.classList.add(mode);
+                  document.documentElement.setAttribute('data-theme', mode);
+                } catch(e) {}
+              })();
+            `,
+          }}
+        ></script>
+      </head>
       <body className='pt-[70px]'>
-        <ThemeProvider>
-            {children}
+        <ThemeProvider serverTheme={theme}>
+          {children}
         </ThemeProvider>
       </body>
     </html>
