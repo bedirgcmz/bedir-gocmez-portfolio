@@ -5,13 +5,15 @@ import { motion } from 'framer-motion';
 import styles from './Educations.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
+  IconDefinition,
   faCode,
   faLaptopCode,
   faPersonChalkboard,
   faPersonWalkingArrowRight,
 } from '@fortawesome/free-solid-svg-icons';
+import { Education, EducationIconKey } from '@/types/education';
 
-const iconMap = {
+const iconMap: Record<EducationIconKey, IconDefinition> = {
   faCode,
   faLaptopCode,
   faPersonChalkboard,
@@ -28,7 +30,7 @@ type EducationItem = {
 };
 
 export default function Educations() {
-  const [data, setData] = useState<EducationItem[] | null>(null);
+  const [data, setData] = useState<Education[] | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -86,7 +88,7 @@ export default function Educations() {
               viewport={{ once: true, amount: 0.4 }}
             >
               <div className={styles.iconBox}>
-                <FontAwesomeIcon icon={iconMap[edu.icon]} />
+                <FontAwesomeIcon icon={iconMap[edu.icon] ?? faCode} />
               </div>
               <div className={styles.iconBoxLeft}>
                 {4 - index}

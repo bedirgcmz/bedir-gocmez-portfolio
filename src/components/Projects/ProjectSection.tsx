@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import ProudOfProjects from './ProudOfProjects/ProudOfProject'
 import SchoolProjects from './SchoolProject/SchoolProjects'

@@ -69,7 +69,7 @@ const skills = [
           {/* Profesional Skills Start*/}
         <div className='relative'>
             <AnimatedSkillCircle
-                url="/images/skills1.png"
+                url="/images/global/skills1.png"
                 alt="Professional Skills"
             />
             {profesionalGroups.map((group, index) => (
@@ -97,7 +97,7 @@ const skills = [
 
             {/* Personal Skills Start*/}
             <div className='relative mt-40'> 
-                    <AnimatedSkillCircle url="/images/skills2.png" alt="Personal Skills" />
+                    <AnimatedSkillCircle url="/images/global/skills2.png" alt="Personal Skills" />
                     {personalGroups.map((group, index) => (
                     <div
                         key={index}

@@ -2,21 +2,21 @@ import Image from 'next/image';
 
 const imageList = [
   {
-    src: '/images/p2.png',
+    src: '/images/global/p2.png',
     alt: 'Project Image 1',
     rotate: '-12',
     offset: '-20', 
     z: '10',
   },
   {
-    src: '/images/p3.png',
+    src: '/images/global/p3.png',
     alt: 'Project Image 2',
     rotate: '-2',
     offset: '0', 
     z: '20',
   },
   {
-    src: '/images/p1.png',
+    src: '/images/global/p1.png',
     alt: 'Project Image 3',
     rotate: '12',
     offset: '20', 

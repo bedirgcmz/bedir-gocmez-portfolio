@@ -8,6 +8,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import ReferenceCard from './ReferenceCard';
 import styles from './References.module.css';
+import { ReferenceDTO } from '@/types/reference';
 
 type Reference = {
   name: string;

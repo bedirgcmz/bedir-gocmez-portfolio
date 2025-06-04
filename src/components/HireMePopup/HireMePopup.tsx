@@ -78,7 +78,7 @@ const HireMePopup = () => {
             <div className={styles.hireMeBgImgContainer} >
               <Image 
                   className="" 
-                  src={"/images/hiremebg2.png"} 
+                  src={"/images/global/hiremebg2.png"} 
                   alt="Hire me button" 
                   fill
                   style={{
@@ -99,7 +99,7 @@ const HireMePopup = () => {
             >
                 <Image 
                 className={styles.hireMeButtonImg} 
-                src={"/images/button.png"} 
+                src={"/images/global/button.png"} 
                 alt="Hire me button" 
                 width={80}
                 height={30}

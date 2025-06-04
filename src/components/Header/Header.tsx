@@ -62,7 +62,7 @@ export default function Header() {
       <div className="max-w-[1600px] mx-auto px-2 sm:px-4 max-xs:px-1 tablet-only:px-1 py-3 flex justify-between items-center">
         <div className="flex items-center gap-3">
           <Image
-            src="/images/profile-logo.jpeg"
+            src="/images/global/profile-logo.jpeg"
             alt="Bedir Gocmez"
             width={40}
             height={40}

@@ -27,7 +27,6 @@ export default function ProjectSwiper() {
     fetch('/data/projects.json')
       .then((res) => res.json())
       .then((data) => {
-        console.log('Fetched data:', data);
         setProjects(data);
       })
       .catch((err) => console.error('Error loading projects:', err));

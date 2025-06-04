@@ -1,4 +1,3 @@
-"use client"
 import AboutSection from "@/components/About/AboutSection";
 import ContactSection from "@/components/Contact/ContactSection";
 import DividerCircle from "@/components/DividerCircle/DividerCircle";

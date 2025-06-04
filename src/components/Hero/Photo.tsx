@@ -13,7 +13,7 @@ export default function Photo() {
         }`}
       >
         <Image
-          src={theme === "dark" ? "/images/about-img.png": "/images/about-img-light.png"}
+          src={theme === "dark" ? "/images/global/about-img.png": "/images/global/about-img-light.png"}
           alt="Bedir Gocmez Portrait"
           width={400}
           height={400}

@@ -4,7 +4,7 @@
         "name": "Mathias H. Fredlund",
         "role": "CTO & Tech leader",
         "quote": "Bedir showed curiosity, discipline, and fast adaptation in our project at Custellence. He took responsibility and grew steadily as a developer.",
-        "image": "/images/mathias.jpeg",
+        "image": "/images/global/mathias.jpeg",
         "stars": 5
     },
     {
@@ -12,7 +12,7 @@
         "name": "Rob Chamberlain",
         "role": "Head Teacher FrontEnd Development",
         "quote": "Bedir is an exceptionally engaged and fast-learning student. His strong frontend skills and collaborative spirit made him a great asset.",
-        "image": "/images/rob.jpeg",
+        "image": "/images/global/rob.jpeg",
         "stars": 5
     },
     {
@@ -20,7 +20,7 @@
         "name": "Tove Lundell",
         "role": "Growth Marketing Manager",
         "quote": "During his internship, Bedir displayed professionalism, a willingness to learn, and the ability to handle tasks independently and effectively.",
-        "image": "/images/tove.jpeg",
+        "image": "/images/global/tove.jpeg",
         "stars": 5
     }
 ]
