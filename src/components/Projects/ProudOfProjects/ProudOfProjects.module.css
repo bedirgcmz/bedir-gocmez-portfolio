@@ -12,8 +12,8 @@
   position: relative;
   margin: 20px 0;
   margin-top: 40px;
-  width: 300px;
-  height: 400px;
+  width: 280px;
+  height: 370px;
   transform-style: preserve-3d;
   transform: perspective(2000px);
   transition: 1s;
@@ -27,7 +27,7 @@
     rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .card:hover {
-  transform: perspective(2000px) rotate(-10deg);
+  transform: perspective(2000px) rotate(-5deg) !important;
   box-shadow: inset 20px 0 50px #00000052;
 }
 
@@ -86,6 +86,6 @@
   margin: 0;
   padding: 0;
   line-height: 22px;
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: #1d8288;
 }

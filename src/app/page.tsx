@@ -38,7 +38,7 @@ export default function Home() {
         <ContactSection />
       </div>
       <Footer />
-      <HireMePopup />
+      {/* <HireMePopup /> */}
     </main>
   );
 }

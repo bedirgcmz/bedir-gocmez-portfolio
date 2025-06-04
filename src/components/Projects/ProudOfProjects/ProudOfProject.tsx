@@ -1,6 +1,7 @@
 
 
 'use client';
+import { motion } from 'framer-motion';
 import styles from './ProudOfProjects.module.css';
 import { useState, useEffect } from 'react';
 
@@ -17,7 +18,7 @@ const projects: Project[] = [
     title: 'SkyTech',
     url:"sky",
     description:
-      "I built a fully responsive website for SkyTech Edu Academy, which offers coding and various courses for children worldwide. Powered by React, the site features smooth animations with Frame Motion, automatic form submission to Google Sheets, and email integration via EmailJS. It also includes three-language support using Context API and saves the user's language preference with LocalStorage.",
+      "I built a fully responsive website for SkyTech Edu Academy, offering coding and other courses for children worldwide. Built with React, it features smooth Framer Motion animations, form submissions to Google Sheets, EmailJS integration, and three-language support via Context API with language preference saved in LocalStorage.",
     alt: 'SkyTech project image',
     demoLink: 'https://bedirgcmz-skytech.netlify.app/',
   },
@@ -49,7 +50,7 @@ const projects: Project[] = [
     title: 'Portfolio',
     url: 'portfolio',
     description:
-      'A modern portfolio section built with React, Next.js, and TypeScript. It features a responsive Swiper carousel with dynamic data fetched from a local JSON file. The UI supports dark/light mode, includes smooth Framer Motion animations, and is styled with Tailwind CSS and modular CSS for clean and scalable design. Also, my Portfolio site has passed 100% accessibility (WCAG) tests.',
+      'A modern portfolio built with React, Next.js, and TypeScript. It features a responsive Swiper carousel with data from a local JSON file, supports dark/light mode, includes Framer Motion animations, and uses Tailwind CSS with modular CSS for scalable design. The site also passed 98% accessibility (WCAG) tests.',
     alt: 'Portfolio Swiper project image',
     demoLink: 'www.bedirgocmez.com',
   }
@@ -75,7 +76,19 @@ const ProudOfProjects = () => {
       <h1 className="text-center text-xl text-[var(--color-lighter)]">Projects I’m Proud Of</h1>
       <div className={styles.container}>
         {projects.map((project, index) => (
-          <div className={styles.card} key={index}>
+          <motion.div 
+          variants={{
+            hidden: { opacity: 0, x: 20 },
+            visible: {
+              opacity: 1,
+              x: 0,
+              transition: { type: "spring", delay: (0.13 * index), duration: 1.6 },
+            },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }} 
+          className={styles.card} key={index}>
             <p className={styles.hoverText}>
               {screenWidth ? 'Click me!' : 'Hover me!'}
             </p>
@@ -97,7 +110,7 @@ const ProudOfProjects = () => {
                 </a>
             
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

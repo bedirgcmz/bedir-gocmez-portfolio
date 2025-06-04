@@ -9,13 +9,16 @@ import { ToastContainer, toast } from 'react-toastify';
 export default function ContactForm() {
   const formRef = useRef<HTMLFormElement | null>(null);
   const [isSent, setIsSent] = useState(false);
+  const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
+const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
+const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
+
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!formRef.current) return;
-        {/*          service id        template id         obje         public id */}
-        emailjs.sendForm("service_w21zl4c", "template_4y8tcvh", formRef.current, "m2Y_XycLwC6X2Pz8M")
+        emailjs.sendForm(serviceID, templateID, formRef.current, publicKey)
         .then(() => {
             toast.success("Message sent successfully!", { position: "bottom-right" });
             setIsSent(true);

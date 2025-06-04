@@ -7,7 +7,7 @@ export default function WhoIAm() {
       aria-labelledby="who-i-am-heading"
       className="w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12 mx-auto mb-12 text-gray-700 dark:text-gray-300 transition-colors duration-300 "
     >
-      <Image src={"/images/global/who-i-am.jpg"} alt='Bedir Gocmez' width={215} height={280} className='rounded-lg hover:scale-105 transitin duration-300 '/>
+      <Image src={"/images/global/who-i-am.jpg"} alt='Bedir Gocmez' width={215} height={280} className='border border-2 border-[var(--color-active)] hover:scale-105 transitin duration-300 rounded-full'/>
         <div className='max-w-[670px] relative'>
             <h2
                 id="who-i-am-heading"

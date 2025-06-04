@@ -30,3 +30,9 @@ body {
 .dark body {
   @apply bg-primary text-white;
 }
+.bg-btn-bg-hover {
+  transition: all 0.2s ease-in-out;
+}
+.bg-btn-bg-hover:hover {
+background-color: var(--color-hover-darker) !important;
+}

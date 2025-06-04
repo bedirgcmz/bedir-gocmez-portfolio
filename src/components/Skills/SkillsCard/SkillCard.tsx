@@ -15,7 +15,7 @@ export default function SkillCard({ url, skill, progress, showCirkle = true }: S
   return (
     <motion.div
       className={`relative flex bg-[#F9F5F2] dark:bg-primary items-center max-xs:justify-center gap-1 md:gap-2 md:w-[220px] max-xs:w-[120px] rounded-full border-2 border-[#1a7b81]  md:px-4 md:py-2 text-white ${styles.cardGlow} ${styles.skillCard}`}
-      whileHover={{ scale: 1.2 }}
+      whileHover={{ scale: 1.1 }}
       transition={{ type: "spring", stiffness: 300, damping: 7 }}
       role="group"
       aria-label={`Skill: ${skill}`}
