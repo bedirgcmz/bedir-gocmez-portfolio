@@ -45,7 +45,7 @@ export default function Footer() {
         {/* Right: Copyright */}
         <div className={styles.copyright}>
           <p>&copy; 2025 Bedir Gocmez. Crafted with ❤️ using Next.js</p>
-          {/* <VisitorCount /> */}
+          <span className='hidden'><VisitorCount /></span>
         </div>
       </div>
     </footer>

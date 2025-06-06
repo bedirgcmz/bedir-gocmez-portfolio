@@ -20,15 +20,6 @@ const iconMap: Record<EducationIconKey, IconDefinition> = {
   faPersonWalkingArrowRight,
 };
 
-type EducationItem = {
-  id: number;
-  icon: keyof typeof iconMap;
-  title: string;
-  company: string;
-  description: string;
-  date: string;
-};
-
 export default function Educations() {
   const [data, setData] = useState<Education[] | null>(null);
   const [loading, setLoading] = useState(true);
