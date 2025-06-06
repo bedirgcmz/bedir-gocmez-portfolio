@@ -8,7 +8,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import ReferenceCard from './ReferenceCard';
 import styles from './References.module.css';
-import { ReferenceDTO } from '@/types/reference';
 
 type Reference = {
   name: string;
@@ -51,7 +50,6 @@ export default function References() {
           loop
           pagination={{ clickable: true }}
           navigation
-        //   autoplay={{ delay: 4000, pauseOnMouseEnter: true }}
           className="rounded-lg"
           style={{ paddingBottom: '40px', padding: '20px' }}
         >
