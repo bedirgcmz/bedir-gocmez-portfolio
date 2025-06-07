@@ -25,14 +25,11 @@ export default function ThemeToggle() {
     <button
       onClick={toggleTheme}
       aria-label="Toggle Theme"
-      className={`
-        w-14 h-[30px] flex items-center rounded-full p-1 transition-colors duration-300
-        ${isDark ? 'border border-[#33bbc5]' : 'border border-gray-300'}
-      `}
-    >
+      className="w-14 h-[30px] flex items-center rounded-full p-1 transition-colors duration-300 relative border border-gray-300 dark:border-[#33bbc5]">
+      <div className='w-[85%] h-[50%] rounded-full bg-gray-400 z-999 absolute top-[7px] left-[5px]'></div>
       <div
         className={`
-          w-[22px] h-[22px] bg-[#33bbc5] rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center text-sm hover:scale-[0.9]
+          w-[22px] h-[22px] bg-[#33bbc5] rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center text-sm z-9999 hover:scale-[0.9]
           ${isDark ? 'translate-x-6' : 'translate-x-0'}
         `}
       >

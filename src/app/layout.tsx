@@ -1,4 +1,4 @@
-import { cookies } from 'next/headers';
+
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from '@/context/ThemeContext'
@@ -18,8 +18,7 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const cookieStore = cookies();
-  const theme = (await cookieStore).get('theme-bdr-portfolio')?.value as 'light' | 'dark' || 'dark';
+  const theme = 'dark';
 
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>

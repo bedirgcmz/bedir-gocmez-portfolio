@@ -52,7 +52,7 @@ const projects: Project[] = [
     description:
       'A modern portfolio built with React, Next.js, and TypeScript. It features a responsive Swiper carousel with data from a local JSON file, supports dark/light mode, includes Framer Motion animations, and uses Tailwind CSS with modular CSS for scalable design. The site also passed 98% accessibility (WCAG) tests.',
     alt: 'Portfolio Swiper project image',
-    demoLink: 'www.bedirgocmez.com',
+    demoLink: 'https://bedirgocmez.com',
   }
   
 ];
@@ -100,15 +100,27 @@ const ProudOfProjects = () => {
               <h2>{project.title}</h2>
               <p className='text-justify'>{project.description}</p>
             
+            <div className='flex gap-4'>
                 <a
                   href={project.demoLink}
-                  className="see-demo btn41-43 py-1 btn-41 w-full text-white rounded-lg shadow-lg text-center bg-[var(--color-active-darker)] transition duration-300 hover:bg-[var(--color-hover)]"
+                  className="py-1 w-full flex-1 text-white rounded-lg shadow-lg text-center bg-[var(--color-active-darker)] transition duration-300 hover:bg-[var(--color-hover)]"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  See demo
+                  Go Website
                 </a>
-            
+                {
+                  project.title === "Portfolio" && 
+                  <a
+                  href={project.demoLink}
+                  className="py-1 w-full flex-1 text-white rounded-lg shadow-lg text-center bg-[var(--color-active-darker)] transition duration-300 hover:bg-[var(--color-hover)]"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Go Github
+                </a>
+                }
+            </div>
             </div>
           </motion.div>
         ))}

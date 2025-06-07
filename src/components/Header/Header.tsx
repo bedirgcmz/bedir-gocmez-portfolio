@@ -55,9 +55,7 @@ export default function Header() {
 
   return (
     <header
-      className={`w-screen fixed top-0 z-50 transition-colors duration-300 max-w-[100vw] ${
-        theme === 'dark' ? 'bg-primary text-white' : 'bg-[#F9F5F2] text-gray-700'
-      } ${styles.header}`}
+      className={`w-screen fixed top-0 z-50 transition-colors duration-300 max-w-[100vw] bg-[#F9F5F2] text-gray-700 dark:bg-primary dark:text-white ${styles.header}`}
     >
       <div className="max-w-[1600px] mx-auto px-2 sm:px-4 max-xs:px-1 tablet-only:px-1 py-3 flex justify-between items-center">
         <div className="flex items-center gap-3">
