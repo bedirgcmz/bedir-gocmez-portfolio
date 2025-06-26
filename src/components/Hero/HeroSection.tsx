@@ -16,7 +16,7 @@ const fromBottomVariants = {
 }
 
   return (
-    <>
+    <div className='max-w-screen'>
     <ParticlesBackground />
     <section
       className={`relative flex flex-col md:flex-row gap-6 max-w-[1600px] m-auto items-center justify-around text-center h-[calc(100vh-70px)] px-4 `}
@@ -24,7 +24,7 @@ const fromBottomVariants = {
         <div className='flex flex-col justify-between items-center md:items-start w-[90%] md:w-[51%] max-w-[600px]   mt-[-50px] md-mt-0'>
             <div className='flex flex-col items-center md:flex-row items-centr justify-between'>
                 <TouchMeSidebar />
-                <div className='flex items-center md:items-start flex-col min-w-[482px]'>
+                <div className='flex items-center md:items-start flex-col md-min-w-[482px]'>
                     <h1 className="w-full max-xs:text-3xl text-4xl lg:text-5xl font-bold mb-4 z-10 md:text-left text-[#1a7b81] dark:text-[var(--color-active)] ">
                         Hi There, I’m{' '} <br />
                         <span className="text-[var(--color-hover)]"><TypeText words={["Bedir Gocmez", "Frontend Developer"]} loop={true}/></span>
@@ -48,6 +48,6 @@ const fromBottomVariants = {
         </div>
         <Photo />
     </section>
-    </>
+    </div>
   );
 }
