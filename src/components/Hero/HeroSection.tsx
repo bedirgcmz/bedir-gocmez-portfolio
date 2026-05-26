@@ -35,7 +35,7 @@ const fromBottomVariants = {
                       Full-Stack Developer - Stockholm
                     </motion.p>
                     <h1 className="w-full max-xs:text-3xl text-4xl lg:text-5xl font-bold mb-4 z-10 md:text-left text-[#1a7b81] dark:text-[var(--color-active)] ">
-                        I build interfaces that feel sharp, fast, and human.{' '} <br />
+                        I build full-stack products with polished interfaces and reliable foundations.{' '} <br />
                         <span className="text-[var(--color-hover)]"><TypeText words={["Bedir Gocmez", "Full-Stack Developer"]} loop={true}/></span>
                     </h1>
                     <motion.p
@@ -44,7 +44,7 @@ const fromBottomVariants = {
                       whileInView="visible"
                       viewport={{ once: true, amount: 0.2 }}
                       className="text-lg md:text-1xl lg:text-2xl mb-6 text-gray-600 dark:text-gray-300 z-10 md:text-left max-w-[95vw] md:max-w-[365px] lg:max-w-[450px]">
-                      I specialize in building responsive, accessible, and modern web interfaces that look great on any screen.
+                      I turn ideas into responsive web and mobile experiences with React, Next.js, TypeScript, APIs, and a strong eye for product detail.
                     </motion.p>
                     <div className='flex gap-6 items-center'>
                         <a href="#about" className="bg-[var(--color-active)] dark:bg-[var(--color-active-darker)] bg-btn-bg-hover max-xs:px-1 max-xs:py-1 flex gap-2 items-center justify-center text-white w-[140px] px-2 py-3 rounded-full z-10 animated hover:scale-105 transition font-semibold">
