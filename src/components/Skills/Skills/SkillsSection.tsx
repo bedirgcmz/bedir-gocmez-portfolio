@@ -30,7 +30,7 @@ const skills = [
     { url: '/images/personalSkillIcons/adaptability.png', skillName: 'Adaptability', padding: 20, progress: 90 },
     { url: '/images/personalSkillIcons/communication.png', skillName: 'Communication', padding: 18, progress: 90 },
     { url: '/images/personalSkillIcons/creative.png', skillName: 'Creative Thinking', padding: 20, progress: 90 },
-    { url: '/images/personalSkillIcons/dog-lover.png', skillName: 'Dog Lover 🐶', padding: 22, progress: 90 },
+    { url: '/images/personalSkillIcons/dog-lover.png', skillName: 'Empathy', padding: 22, progress: 90 },
     { url: '/images/personalSkillIcons/fast-learner.png', skillName: 'Fast Learner', padding: 20, progress: 90 },
     { url: '/images/personalSkillIcons/problem-solving.png', skillName: 'Problem Solving', padding: 20, progress: 90 },
     { url: '/images/personalSkillIcons/stress-management.png', skillName: 'Stress Management', padding: 18, progress: 90 },
@@ -65,9 +65,10 @@ const skills = [
 
   
     return (
-      <section className="mt-12 relative max-w-[1200px] m-auto">
+      <section className={`mt-12 relative max-w-[1200px] m-auto ${styles.section}`}>
           {/* Profesional Skills Start*/}
-        <div className='relative'>
+        <div className={styles.skillCluster}>
+            <ConstellationBackdrop />
             <AnimatedSkillCircle
                 url="/images/global/skills1.png"
                 alt="Professional Skills"
@@ -79,7 +80,7 @@ const skills = [
                     paddingLeft: `${profesionalPaddings[index]}%`,
                     paddingRight: `${profesionalPaddings[index]}%`,
                 }}
-                className={`flex ${index === 0 || index === profesionalGroups.length-1 ? "justify-center" : "justify-between"} gap-8 items-center mt-6 ${index === 1 || index === profesionalGroups.length-2 ? styles.skillsCardContainer : ""}`}
+                className={`flex ${index === 0 || index === profesionalGroups.length-1 ? "justify-center" : "justify-between"} gap-8 items-center mt-6 ${styles.skillRow} ${index === 1 || index === profesionalGroups.length-2 ? styles.skillsCardContainer : ""}`}
             >
                 {group.map((item, i) => (
                 <SkillCard
@@ -96,7 +97,8 @@ const skills = [
             {/* Profesional Skills End*/}
 
             {/* Personal Skills Start*/}
-            <div className='relative mt-40'> 
+            <div className={`${styles.skillCluster} mt-40`}> 
+                    <ConstellationBackdrop variant="secondary" />
                     <AnimatedSkillCircle url="/images/global/skills2.png" alt="Personal Skills" />
                     {personalGroups.map((group, index) => (
                     <div
@@ -105,7 +107,7 @@ const skills = [
                             paddingLeft: `${personalPaddings[index]}%`,
                             paddingRight: `${personalPaddings[index]}%`,
                         }}
-                        className={`flex ${index === 0 || index === personalGroups.length-1 ? "justify-center" : "justify-between"} gap-8 items-center mt-16 ${index === 1 || index === personalGroups.length-2 ? styles.skillsCardContainer : ""}`}
+                        className={`flex ${index === 0 || index === personalGroups.length-1 ? "justify-center" : "justify-between"} gap-8 items-center mt-16 ${styles.skillRow} ${index === 1 || index === personalGroups.length-2 ? styles.skillsCardContainer : ""}`}
                     >
                         {group.map((item, i) => (
                         <SkillCard
@@ -126,6 +128,20 @@ const skills = [
   };
 
 export default SkillsSection
+
+function ConstellationBackdrop({ variant = 'primary' }: { variant?: 'primary' | 'secondary' }) {
+  return (
+    <div className={`${styles.constellation} ${variant === 'secondary' ? styles.constellationSecondary : ''}`} aria-hidden="true">
+      <span className={styles.orbitOne} />
+      <span className={styles.orbitTwo} />
+      <span className={styles.orbitThree} />
+      <i />
+      <i />
+      <i />
+      <i />
+    </div>
+  );
+}
 
 type AnimatedSkillCircleProps = {
     url: string;

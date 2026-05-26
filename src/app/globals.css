@@ -22,6 +22,10 @@
 
 }
 
+html {
+  scroll-behavior: auto;
+}
+
 body {
   @apply bg-[#F9F5F2] text-[gray-700] transition-colors duration-300;
   font-family: var(--font-main), sans-serif;

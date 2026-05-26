@@ -1,91 +1,324 @@
+.section {
+  position: relative;
+  width: min(100%, 1440px);
+  margin: 0 auto;
+  padding: 24px 20px 80px;
+  overflow: clip;
+}
 
-.container {
-  max-width: 1480px;
-  margin: 20px auto;
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 4% 6% auto auto;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.16), transparent 68%);
+  pointer-events: none;
+}
+
+.header {
+  max-width: 760px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.header p {
+  margin: 0 0 12px;
+  font-family: var(--font-accent), sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--color-lighter);
+}
+
+.header h2 {
+  margin: 0;
+  color: #12363a;
+  font-size: clamp(2.2rem, 5vw, 4.8rem);
+  line-height: 0.95;
+  font-weight: 800;
+}
+
+:global(.dark) .header h2 {
+  color: #f8fafc;
+}
+
+.showcase {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: start;
+}
+
+.stickyPanel {
+  position: sticky;
+  top: 110px;
+  min-height: 420px;
+  padding: 30px;
+  border: 1px solid rgba(26, 123, 129, 0.2);
+  border-radius: 8px;
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.36)),
+    rgba(249, 245, 242, 0.6);
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(18px);
+}
+
+:global(.dark) .stickyPanel {
+  border-color: rgba(255, 255, 255, 0.12);
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03)),
+    rgba(7, 16, 19, 0.68);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
+.eyebrow {
+  margin-bottom: 34px;
+  font-family: var(--font-accent), sans-serif;
+  color: var(--color-lighter);
+  font-size: 0.84rem;
+  letter-spacing: 0.2em;
+}
+
+.stickyPanel h3 {
+  margin: 0 0 12px;
+  color: #0f172a;
+  font-size: clamp(2rem, 4vw, 3.7rem);
+  line-height: 0.94;
+}
+
+:global(.dark) .stickyPanel h3 {
+  color: #f8fafc;
+}
+
+.stickyPanel p {
+  margin: 0;
+  color: #64748b;
+}
+
+:global(.dark) .stickyPanel p {
+  color: #cbd5e1;
+}
+
+.progressRail {
+  position: absolute;
+  right: 24px;
+  top: 30px;
+  bottom: 30px;
+  width: 3px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(26, 123, 129, 0.16);
+}
+
+.progressRail span {
+  display: block;
+  width: 100%;
+  border-radius: inherit;
+  background: linear-gradient(180deg, var(--color-active), var(--color-lighter));
+  transition: height 0.42s ease;
+}
+
+.projectList {
+  display: grid;
+  gap: 28px;
+}
+
+.projectCard {
+  --project-accent: #2dd4bf;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(280px, 1.15fr);
+  gap: clamp(22px, 4vw, 42px);
+  align-items: center;
+  min-height: 430px;
+  padding: clamp(18px, 3vw, 32px);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 82% 12%, color-mix(in srgb, var(--project-accent) 22%, transparent), transparent 34%),
+    rgba(255, 255, 255, 0.74);
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.12);
+  transform-style: preserve-3d;
+}
+
+:global(.dark) .projectCard {
+  border-color: rgba(255, 255, 255, 0.12);
+  background:
+    radial-gradient(circle at 82% 12%, color-mix(in srgb, var(--project-accent) 24%, transparent), transparent 34%),
+    rgba(255, 255, 255, 0.055);
+  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.3);
+}
+
+.copy {
+  min-width: 0;
+}
+
+.projectNumber {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: var(--project-accent);
+  font-family: var(--font-accent), sans-serif;
+  font-size: 0.86rem;
+  letter-spacing: 0.24em;
+}
+
+.copy h3 {
+  margin: 0 0 16px;
+  color: #0f172a;
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 0.95;
+}
+
+:global(.dark) .copy h3 {
+  color: #f8fafc;
+}
+
+.copy p {
+  max-width: 58ch;
+  margin: 0 0 22px;
+  color: #475569;
+  font-size: clamp(0.96rem, 1.5vw, 1.08rem);
+  line-height: 1.75;
+}
+
+:global(.dark) .copy p {
+  color: #dbeafe;
+}
+
+.stack {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
+  gap: 10px;
+  margin-bottom: 26px;
 }
 
-.card {
+.stack span {
+  padding: 8px 11px;
+  border: 1px solid color-mix(in srgb, var(--project-accent) 34%, transparent);
+  border-radius: 999px;
+  color: #0f172a;
+  background: rgba(255, 255, 255, 0.54);
+  font-size: 0.78rem;
+}
+
+:global(.dark) .stack span {
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.copy a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 999px;
+  color: #071013;
+  background: var(--project-accent);
+  font-weight: 800;
+  box-shadow: 0 16px 40px color-mix(in srgb, var(--project-accent) 28%, transparent);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.copy a:hover,
+.copy a:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 48px color-mix(in srgb, var(--project-accent) 38%, transparent);
+}
+
+.pendingLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 18px;
+  border: 1px solid color-mix(in srgb, var(--project-accent) 34%, transparent);
+  border-radius: 999px;
+  color: #0f172a;
+  background: rgba(255, 255, 255, 0.48);
+  font-weight: 800;
+}
+
+:global(.dark) .pendingLink {
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.preview {
   position: relative;
-  margin: 20px 0;
-  margin-top: 40px;
-  width: 280px;
-  height: 370px;
-  transform-style: preserve-3d;
-  transform: perspective(2000px);
-  transition: 1s;
-  border-radius: 12px;
-  border: 2px solid var(--color-active);
-  padding: 8px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px,
-    rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px,
-    rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-.card:hover {
-  transform: perspective(2000px) rotate(-5deg) !important;
-  box-shadow: inset 20px 0 50px #00000052;
-}
-
-.hoverText {
-  position: absolute;
-  top: -30px;
-  left: 37%;
-  color: var(--color-active);
-}
-
-.imageContainer {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-origin: left;
-  z-index: 2;
-  transition: 1s;
-}
-
-.imageContainer img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+  overflow: hidden;
   border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: #071013;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.26);
 }
 
-.card:hover .imageContainer {
-  transform: rotateY(-135deg);
-}
-
-.details {
-  position: absolute;
-  left: 7px;
-  top: 7px;
-  padding: 10px 16px;
-  color: #000;
+.browserBar {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 96.4%;
-  width: 95%;
+  align-items: center;
+  gap: 8px;
+  height: 38px;
+  padding: 0 14px;
+  background: rgba(255, 255, 255, 0.08);
 }
 
-.details h2 {
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  font-size: 2em;
-  color: var(--color-hover);
+.browserBar span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ef4444;
 }
 
-.details p {
-  margin: 0;
-  padding: 0;
-  line-height: 22px;
-  font-size: 0.8em;
-  color: #1d8288;
+.browserBar span:nth-child(2) {
+  background: #f59e0b;
+}
+
+.browserBar span:nth-child(3) {
+  background: #22c55e;
+}
+
+.projectImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.42 / 1;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 0.7s ease;
+}
+
+.projectCard:hover .projectImage,
+.projectCard:focus-within .projectImage {
+  transform: scale(1.08);
+}
+
+@media (max-width: 980px) {
+  .showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .stickyPanel {
+    position: relative;
+    top: auto;
+    min-height: auto;
+  }
+
+  .projectCard {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding-inline: 14px;
+  }
+
+  .projectCard {
+    min-height: auto;
+  }
+
+  .stickyPanel {
+    padding: 24px;
+  }
 }

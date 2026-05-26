@@ -4,13 +4,14 @@ import "./globals.css";
 import { ThemeProvider } from '@/context/ThemeContext'
 import 'react-toastify/dist/ReactToastify.css';
 import { Inter, Space_Grotesk } from 'next/font/google';
+import SmoothScroll from "@/components/SmoothScroll";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space' });
 
 export const metadata: Metadata = {
   title: "Bedir Gocmez",
-  description: "Bedir Gocmez's frontend portfolio with React, Next.js, and TypeScript. Scoring 98 in both accessibility and performance. Always open to new opportunities in web development."
+  description: "Bedir Gocmez's full-stack developer portfolio with React, Next.js, TypeScript, APIs, and accessible product-focused web experiences."
 };
 
 export default async function RootLayout({
@@ -45,6 +46,7 @@ export default async function RootLayout({
       </head>
       <body className='pt-[70px]'>
         <ThemeProvider serverTheme={theme}>
+          <SmoothScroll />
           {children}
         </ThemeProvider>
       </body>

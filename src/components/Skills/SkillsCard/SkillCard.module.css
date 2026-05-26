@@ -1,9 +1,19 @@
 .skillCard {
     width: 150px;
     padding: 4px;
-    box-shadow: 0 0 15px rgba(51, 187, 197, .45);
-    /* transition: transform 0.3s ease-in-out; */
+    box-shadow: 0 0 15px rgba(51, 187, 197, .35);
+    backdrop-filter: blur(14px);
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.36)) !important;
+    border-color: rgba(26, 123, 129, 0.5) !important;
   } 
+
+  :global(.dark) .skillCard {
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03)) !important;
+    border-color: rgba(45, 212, 191, 0.35) !important;
+    box-shadow: 0 0 22px rgba(45, 212, 191, 0.18);
+  }
 
   @media (min-width: 768px)  {
     .skillCard {

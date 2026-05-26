@@ -15,7 +15,7 @@ const ExperienceSection: React.FC = () => {
         <div className="flex flex-col gap-8 lg:gap-36 items-end flex-1 md:w-[380px]">
           <ExperienceCard
           company="Boldwealth"
-          role="Frontend Developer"
+          role="Full-Stack Developer"
           description="Refactored a Next.js 15 project with server components and multilingual SEO, and continue to develop it further in my current role."
           date="Jun 2025 – Present"
           iconClass="fa-solid fa-building"
@@ -25,7 +25,7 @@ const ExperienceSection: React.FC = () => {
         
         <ExperienceCard
             company="Freelancer"
-            role="Frontend Developer"
+            role="Full-Stack Developer"
             description="Built custom web & mobile apps using React, Next.js, and React Native. Delivered client projects end-to-end."
             date="Sep 2022 – Present"
             iconClass="fa-solid fa-building"
@@ -41,7 +41,7 @@ const ExperienceSection: React.FC = () => {
         <div className="flex flex-col gap-8 lg:gap-36 items-start flex-1 w-[380px] lg:mt-[160px]">
             <ExperienceCard
             company="Custellence"
-            role="Frontend Developer (Intern)"
+            role="Product Developer (Intern)"
             description="Built AI-powered features, integrated APIs, and delivered dozens of UI/UX improvements in a live B2B React platform. All contributions are now in production."
             date="Jan 2025 – Jul 2025"
             iconClass="fa-solid fa-building"

@@ -1,12 +1,12 @@
 "use client"
 import ParticlesBackground from './ParticlesBackground';
-import Photo from './Photo';
 import HireMeButton from './HireMeButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import TypeText from '../Typewriter/Typewriter';
 import TouchMeSidebar from './TouchMeSideBar/TouchMeSidebar';
 import { motion } from 'framer-motion'
+import DeveloperShowcase from './DeveloperShowcase';
 
 export default function HeroSection() {
 
@@ -19,15 +19,24 @@ const fromBottomVariants = {
     <div className='max-w-screen'>
     <ParticlesBackground />
     <section
-      className={`relative flex flex-col md:flex-row gap-6 max-w-[1600px] m-auto items-center justify-around text-center h-[calc(100vh-70px)] px-4 `}
+      className="relative flex flex-col lg:flex-row gap-8 max-w-[1600px] m-auto items-center justify-around text-center min-h-[calc(100vh-70px)] px-4 py-10 lg:py-0 overflow-hidden"
     >
-        <div className='flex flex-col justify-between items-center md:items-start w-[90%] md:w-[51%] max-w-[600px]   mt-[-50px] md-mt-0'>
+        <div className='flex flex-col justify-between items-center md:items-start w-[92%] lg:w-[48%] max-w-[640px]'>
             <div className='flex flex-col items-center md:flex-row items-centr justify-between'>
                 <TouchMeSidebar />
                 <div className='flex items-center md:items-start flex-col md-min-w-[482px]'>
+                    <motion.p
+                      variants={fromBottomVariants}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, amount: 0.2 }}
+                      className="mb-3 z-10 text-xs sm:text-sm uppercase tracking-[0.28em] text-[var(--color-hover)] dark:text-[var(--color-active)]"
+                    >
+                      Full-Stack Developer - Stockholm
+                    </motion.p>
                     <h1 className="w-full max-xs:text-3xl text-4xl lg:text-5xl font-bold mb-4 z-10 md:text-left text-[#1a7b81] dark:text-[var(--color-active)] ">
-                        Hi There, I’m{' '} <br />
-                        <span className="text-[var(--color-hover)]"><TypeText words={["Bedir Gocmez", "Frontend Developer"]} loop={true}/></span>
+                        I build interfaces that feel sharp, fast, and human.{' '} <br />
+                        <span className="text-[var(--color-hover)]"><TypeText words={["Bedir Gocmez", "Full-Stack Developer"]} loop={true}/></span>
                     </h1>
                     <motion.p
                       variants={fromBottomVariants}
@@ -46,7 +55,7 @@ const fromBottomVariants = {
                 </div>
             </div>
         </div>
-        <Photo />
+        <DeveloperShowcase />
     </section>
     </div>
   );

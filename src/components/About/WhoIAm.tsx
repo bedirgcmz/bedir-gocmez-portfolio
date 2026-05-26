@@ -16,7 +16,7 @@ export default function WhoIAm() {
                 Who I Am
             </h2>
             <p className="text-base md:text-lg leading-relaxed z-[2] text-justify">
-                I&#39;m a Frontend Developer based in Stockholm, passionate about crafting responsive and accessible web applications using technologies like React, Next.js, and TypeScript. My journey into tech began after years in education, where I honed my skills in communication and problem-solving. This background enriches my approach to development, emphasizing user-centric design and collaboration.
+                I&#39;m a Full-Stack Developer based in Stockholm, passionate about crafting responsive, accessible, and product-minded web applications with React, Next.js, TypeScript, APIs, and modern backend tools. My journey into tech began after years in education, where I honed my skills in communication and problem-solving. This background enriches my approach to development, emphasizing user-centric design and collaboration.
             </p>
             <p className="text-base md:text-lg leading-relaxed mt-4 z-[2] text-justify">
                 Beyond coding, I enjoy exploring the vibrant culture of Stockholm, engaging in outdoor activities, and continuously learning about the latest advancements in AI and web technologies. I&#39;m always eager to take on new challenges and contribute to meaningful projects that make a difference.

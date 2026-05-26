@@ -14,15 +14,59 @@
 .timelineWrapper {
     height: 800px;
     min-height: 100%;
+    width: 4.2rem;
   }
   
-  .timeline {
+  .timelineTrack {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 2.9rem;
+    height: 100%;
     padding: 1rem 0;
+    overflow: hidden;
+    border-radius: 999px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.04)),
+      var(--color-active-darker);
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.14),
+      0 22px 60px rgba(0, 0, 0, 0.18);
+  }
+
+  .timelineFill {
+    position: absolute;
+    inset: 0;
+    transform-origin: top;
+    border-radius: inherit;
+    background: linear-gradient(180deg, #2dd4bf, #f59e0b);
+    opacity: 0.82;
+  }
+
+  .yearPill {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 2.2rem;
+    min-height: 3rem;
+    border-radius: 999px;
+    color: white;
+    font-size: 0.78rem;
+    font-weight: 800;
+    writing-mode: vertical-rl;
+    letter-spacing: 0.08em;
+    background: rgba(7, 16, 19, 0.34);
+    backdrop-filter: blur(10px);
   }
   
   .arrow {
     font-size: 1.25rem;
     max-width: 10px;
+    color: var(--color-active);
+    filter: drop-shadow(0 0 10px rgba(45, 212, 191, 0.5));
   }
   .arrow1 {
     top: 10px;

@@ -1,132 +1,208 @@
-
-
 'use client';
-import { motion } from 'framer-motion';
-import styles from './ProudOfProjects.module.css';
-import { useState, useEffect } from 'react';
 
-interface Project {
+import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import styles from './ProudOfProjects.module.css';
+
+type Project = {
   title: string;
   url: string;
   description: string;
   alt: string;
-  demoLink: string;
-}
+  demoLink?: string;
+  linkLabel?: string;
+  stack: string[];
+  impact: string;
+  accent: string;
+};
 
 const projects: Project[] = [
   {
-    title: 'SkyTech',
-    url:"sky",
+    title: 'Parlio',
+    url: 'parlio',
     description:
-      "I built a fully responsive website for SkyTech Edu Academy, offering coding and other courses for children worldwide. Built with React, it features smooth Framer Motion animations, form submissions to Google Sheets, EmailJS integration, and three-language support via Context API with language preference saved in LocalStorage.",
-    alt: 'SkyTech project image',
-    demoLink: 'https://bedirgcmz-skytech.netlify.app/',
-  },
-  {
-    title: 'Rose Taxi',
-    url:"rosee",
-    description:
-      'For this taxi company in the UK, I created a sweet and user-friendly website. You’ll love the components designed with a focus on UI and UX. I also designed a custom logo for this site. EmailJS was used for sending emails, and the website is fully responsive. I worked with color palettes to find the most harmonious combinations, resulting in a beautifully crafted website.',
-    alt: 'Rose Taxi project image',
-    demoLink: 'https://www.rosetravel.co.uk/',
-  },
-  {
-    title: 'Parking Time',
-    url:"parking",
-    description:
-      'I contributed to the ParkingTime project as part of a cross-functional team. Built with Next.js, TypeScript, Tailwind CSS, and Contentful CMS, the parking management system followed Agile practices and was managed via Jira. I developed reusable React components, integrated API endpoints, and ensured accessibility and responsiveness across devices.',
-    alt: 'Parking Time project image',
-    demoLink: 'https://parking-time-next.vercel.app/',
+      'A full language learning product that turns your own sentences into real practice with AI translation, flashcards, quizzes, listening, sentence building, dialogs, games, XP, and premium flows.',
+    alt: 'Parlio app preview',
+    demoLink: 'https://parlio-app.netlify.app/',
+    stack: ['React Native', 'TypeScript', 'AI', 'Product UX'],
+    impact: 'Language learning app',
+    accent: '#8b5cf6',
   },
   {
     title: 'Simple Task',
-    url:"simpletask",
+    url: 'simpletask',
     description:
-      'This React Native application helps users manage their daily tasks efficiently. Built with technologies like React Navigation and Tailwind CSS (via NativeWind), it offers a clean, responsive, and user-friendly interface. The app is currently live on Google Play and available for download. Its codebase is scalable and developer-friendly, making it easy to maintain and extend.',
-    alt: 'Simple Task project image',
+      'A React Native task app live on Google Play, focused on clean daily workflows, scalable structure, and a practical mobile user experience.',
+    alt: 'Simple Task project preview',
     demoLink: 'https://play.google.com/store/apps/details?id=com.bgSweden.simpletask',
+    stack: ['React Native', 'Mobile', 'NativeWind'],
+    impact: 'Published app',
+    accent: '#22c55e',
   },
   {
-    title: 'Portfolio',
+    title: 'SkyTech',
+    url: 'sky',
+    description:
+      'A responsive learning platform for children, built with React, multilingual content, EmailJS, Google Sheets submissions, and polished Framer Motion interactions.',
+    alt: 'SkyTech project preview',
+    demoLink: 'https://bedirgcmz-skytech.netlify.app/',
+    stack: ['React', 'i18n', 'EmailJS', 'Motion'],
+    impact: 'Education platform',
+    accent: '#38bdf8',
+  },
+  {
+    title: 'Parking Time',
+    url: 'parking',
+    description:
+      'A parking management product built in a cross-functional team with Next.js, TypeScript, Tailwind, Contentful CMS, reusable components, and API integrations.',
+    alt: 'Parking Time project preview',
+    demoLink: 'https://parking-time-next.vercel.app/',
+    stack: ['Next.js', 'TypeScript', 'CMS', 'API'],
+    impact: 'Product build',
+    accent: '#f59e0b',
+  },
+  {
+    title: 'Rosa Taxi',
+    url: 'rosee',
+    description:
+      'A service website for a UK taxi company with custom branding, responsive UX, form flows, and a warm visual identity designed around trust and clarity.',
+    alt: 'Rosa Taxi project preview',
+    demoLink: 'https://www.rosetravel.co.uk/',
+    stack: ['React', 'UX', 'Branding', 'EmailJS'],
+    impact: 'Client delivery',
+    accent: '#fb7185',
+  },
+  {
+    title: 'Profile',
     url: 'portfolio',
     description:
-      'A modern portfolio built with React, Next.js, and TypeScript. It features a responsive Swiper carousel with data from a local JSON file, supports dark/light mode, includes Framer Motion animations, and uses Tailwind CSS with modular CSS for scalable design. The site also passed 98% accessibility (WCAG) tests.',
-    alt: 'Portfolio Swiper project image',
+      'A Next.js and TypeScript portfolio with dark/light mode, accessibility-minded UI, data-driven sections, motion, and a static export deployment flow.',
+    alt: 'Portfolio project preview',
     demoLink: 'https://bedirgocmez.com',
-  }
-  
+    stack: ['Next.js', 'TypeScript', 'A11y', 'Tailwind'],
+    impact: 'Personal brand',
+    accent: '#2dd4bf',
+  },
 ];
 
-const ProudOfProjects = () => {
-  const [screenWidth, setScreenWidth] = useState(false);
+export default function ProudOfProjects() {
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth < 769);
-    };
-    window.addEventListener('resize', handleResize);
-    handleResize();
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    gsap.registerPlugin(ScrollTrigger);
+
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const context = gsap.context(() => {
+      gsap.fromTo(
+        '[data-project-heading]',
+        { opacity: 0, y: 28 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 72%',
+          },
+        }
+      );
+
+      gsap.utils.toArray<HTMLElement>('[data-project-card]').forEach((card, index) => {
+        gsap.fromTo(
+          card,
+          { opacity: 0, y: 70, rotateX: -8 },
+          {
+            opacity: 1,
+            y: 0,
+            rotateX: 0,
+            duration: 0.85,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: card,
+              start: 'top 78%',
+              onEnter: () => setActiveIndex(index),
+              onEnterBack: () => setActiveIndex(index),
+            },
+          }
+        );
+      });
+    }, section);
+
+    return () => context.revert();
   }, []);
 
-  return (
-    <div>
-      <h1 className="text-center text-xl text-[var(--color-lighter)]">Projects I’m Proud Of</h1>
-      <div className={styles.container}>
-        {projects.map((project, index) => (
-          <motion.div 
-          variants={{
-            hidden: { opacity: 0, x: 20 },
-            visible: {
-              opacity: 1,
-              x: 0,
-              transition: { type: "spring", delay: (0.13 * index), duration: 1.6 },
-            },
-          }}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }} 
-          className={styles.card} key={index}>
-            <p className={styles.hoverText}>
-              {screenWidth ? 'Click me!' : 'Hover me!'}
-            </p>
-            <div className={styles.imageContainer}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={`/images/proudProjects/${project.url}.jpg`} alt={project.alt} />
-            </div>
-            <div className={styles.details}>
-              <h2>{project.title}</h2>
-              <p className='text-justify'>{project.description}</p>
-            
-            <div className='flex gap-4'>
-                <a
-                  href={project.demoLink}
-                  className="py-1 w-full flex-1 text-white rounded-lg shadow-lg text-center bg-[var(--color-active-darker)] transition duration-300 hover:bg-[var(--color-hover)]"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Go Website
-                </a>
-                {
-                  project.title === "Portfolio" && 
-                  <a
-                  href={project.demoLink}
-                  className="py-1 w-full flex-1 text-white rounded-lg shadow-lg text-center bg-[var(--color-active-darker)] transition duration-300 hover:bg-[var(--color-hover)]"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Go Github
-                </a>
-                }
-            </div>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </div>
-  );
-};
+  const activeProject = projects[activeIndex];
 
-export default ProudOfProjects;
+  return (
+    <section ref={sectionRef} className={styles.section} aria-labelledby="featured-projects-title">
+      <div className={styles.header} data-project-heading>
+        <p>Selected work</p>
+        <h2 id="featured-projects-title">Projects that show how I build</h2>
+      </div>
+
+      <div className={styles.showcase}>
+        <aside className={styles.stickyPanel}>
+          <div className={styles.eyebrow}>0{activeIndex + 1} / 0{projects.length}</div>
+          <h3>{activeProject.title}</h3>
+          <p>{activeProject.impact}</p>
+          <div className={styles.progressRail} aria-hidden="true">
+            <span style={{ height: `${((activeIndex + 1) / projects.length) * 100}%` }} />
+          </div>
+        </aside>
+
+        <div className={styles.projectList}>
+          {projects.map((project, index) => (
+            <article
+              key={project.title}
+              className={styles.projectCard}
+              data-project-card
+              style={{ '--project-accent': project.accent } as React.CSSProperties}
+              onMouseEnter={() => setActiveIndex(index)}
+              onFocus={() => setActiveIndex(index)}
+            >
+              <div className={styles.copy}>
+                <span className={styles.projectNumber}>0{index + 1}</span>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div className={styles.stack}>
+                  {project.stack.map((item) => (
+                    <span key={item}>{item}</span>
+                  ))}
+                </div>
+                {project.demoLink ? (
+                  <a href={project.demoLink} target="_blank" rel="noreferrer">
+                    {project.linkLabel || 'View live project'}
+                  </a>
+                ) : (
+                  <span className={styles.pendingLink}>Release details coming soon</span>
+                )}
+              </div>
+
+              <div className={styles.preview} aria-label={project.alt}>
+                <div className={styles.browserBar}>
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <Image
+                  src={`/images/proudProjects/${project.url}.jpg`}
+                  alt={project.alt}
+                  width={640}
+                  height={460}
+                  className={styles.projectImage}
+                  sizes="(max-width: 768px) 92vw, 48vw"
+                />
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
