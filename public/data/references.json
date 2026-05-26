@@ -9,6 +9,22 @@
     },
     {
         "id": 2,
+        "name": "Karin Sjödin",
+        "role": "CEO Custellence",
+        "quote": "Bedir contributed to our live product with UI, accessibility, and new features. He is solution-oriented, asks the right questions, communicates clearly, and truly cares about user experience.",
+        "image": "/images/global/karin.jpeg",
+        "stars": 5
+    },
+    {
+        "id": 3,
+        "name": "Maria Hendricks",
+        "role": "Frontend Developer",
+        "quote": "I worked with Bedir on several projects and was impressed by his problem-solving, quick learning, and reliability. He’s collaborative and explains code clearly – a valuable teammate for any team.",
+        "image": "/images/global/maria.jpeg",
+        "stars": 5
+    },
+    {
+        "id": 4,
         "name": "Rob Chamberlain",
         "role": "Head Teacher FrontEnd Development",
         "quote": "Bedir is an exceptionally engaged and fast-learning student. His strong frontend skills and collaborative spirit made him a great asset.",
@@ -16,7 +32,15 @@
         "stars": 5
     },
     {
-        "id": 3,
+        "id": 5,
+        "name": "Sabina Persson",
+        "role": "Co-founder & CXO Custellence",
+        "quote": "Bedir made a real impact at Custellence with UI, accessibility, and new features – including an AI generator. His proactive mindset, user focus, and collaborative spirit made him a trusted teammate.",
+        "image": "/images/global/sabina.jpeg",
+        "stars": 5
+    },
+    {
+        "id": 6,
         "name": "Tove Lundell",
         "role": "Growth Marketing Manager",
         "quote": "During his internship, Bedir displayed professionalism, a willingness to learn, and the ability to handle tasks independently and effectively.",

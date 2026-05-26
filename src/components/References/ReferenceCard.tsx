@@ -20,7 +20,7 @@ export default function ReferenceCard({ name, role, quote, image, stars }: Props
             className={styles.avatar}
         />
         <div className={styles.card} aria-label={`Reference from ${name}`}>
-        <div>
+        <div className='flex flex-col h-[90%] pt-2'>
             <h3 className={`${styles.name} max-xs:text-[16px]`}>{name}</h3>
             <p className={`${styles.role}  max-xs:text-[14px]`}>{role}</p>
             <p className={`${styles.summary} max-xs:text-[12px]`}>{quote}</p>

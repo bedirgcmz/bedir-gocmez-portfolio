@@ -13,24 +13,24 @@ const ExperienceSection: React.FC = () => {
     <div className="flex flex-col lg:flex-row relative justify-center items-start gap-10 w-full max-xxs:ps-[55px] sm:ps-[62px] ps-[70px] md:ps-[110px]">
         {/* Left Cards */}
         <div className="flex flex-col gap-8 lg:gap-36 items-end flex-1 md:w-[380px]">
+          <ExperienceCard
+          company="Boldwealth"
+          role="Frontend Developer"
+          description="Refactored a Next.js 15 project with server components and multilingual SEO, and continue to develop it further in my current role."
+          date="Jun 2025 – Present"
+          iconClass="fa-solid fa-building"
+          direction="left"
+          delay={0.4}
+          />
         
-            <ExperienceCard
-            company="Custellence"
-            role="Frontend Developer (Intern)"
-            description="Built AI-powered features, integrated APIs, and delivered dozens of UI/UX improvements in a live B2B React platform. All contributions are now in production."
-            date="Jan 2025 – Jul 2025"
+        <ExperienceCard
+            company="Freelancer"
+            role="Frontend Developer"
+            description="Built custom web & mobile apps using React, Next.js, and React Native. Delivered client projects end-to-end."
+            date="Sep 2022 – Present"
             iconClass="fa-solid fa-building"
             direction="right"
-            delay={0.4}
-            />
-            <ExperienceCard
-            company="Futuregames"
-            role="Frontend / App Developer"
-            description="Built apps with React, TypeScript, Tailwind & Next.js. Used Agile methods and CMS tools."
-            date="Jan 2023 – Jul 2025"
-            iconClass="fa-solid fa-building"
-            direction="left"
-            delay={0.4}
+            delay={0.6}
             />
         </div>
 
@@ -40,18 +40,19 @@ const ExperienceSection: React.FC = () => {
         {/* Right Cards */}
         <div className="flex flex-col gap-8 lg:gap-36 items-start flex-1 w-[380px] lg:mt-[160px]">
             <ExperienceCard
-            company="Freelancer"
-            role="Frontend Developer"
-            description="Built custom web & mobile apps using React, Next.js, and React Native. Delivered client projects end-to-end."
-            date="Sep 2022 – Present"
+            company="Custellence"
+            role="Frontend Developer (Intern)"
+            description="Built AI-powered features, integrated APIs, and delivered dozens of UI/UX improvements in a live B2B React platform. All contributions are now in production."
+            date="Jan 2025 – Jul 2025"
             iconClass="fa-solid fa-building"
             direction="right"
-            delay={0.6}
+            delay={0.4}
             />
+
         <ExperienceCard
             company="Rainbow Schools & MEM Edicational Ins."
-            role="Teacher"
-            description="Managed classrooms, supported student literacy & family communication in primary education."
+            role="Teacher & IT Support Specialist"
+            description="Led digital transformation in education; provided IT support, created learning materials, and trained staff in tech tools."
             date="Sep 2011 – Jul 2014"
             iconClass="fa-solid fa-building"
             direction="left"
