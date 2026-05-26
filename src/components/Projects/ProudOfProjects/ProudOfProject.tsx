@@ -14,6 +14,7 @@ type Project = {
   demoLink?: string;
   linkLabel?: string;
   stack: string[];
+  facts: string[];
   impact: string;
   accent: string;
 };
@@ -27,6 +28,7 @@ const projects: Project[] = [
     alt: 'Parlio app preview',
     demoLink: 'https://parlio-app.netlify.app/',
     stack: ['React Native', 'TypeScript', 'AI', 'Product UX'],
+    facts: ['iOS + Android', '7 languages', 'AI practice flow'],
     impact: 'Language learning app',
     accent: '#8b5cf6',
   },
@@ -38,6 +40,7 @@ const projects: Project[] = [
     alt: 'Simple Task project preview',
     demoLink: 'https://play.google.com/store/apps/details?id=com.bgSweden.simpletask',
     stack: ['React Native', 'Mobile', 'NativeWind'],
+    facts: ['Google Play', 'Daily workflow', 'Mobile UX'],
     impact: 'Published app',
     accent: '#22c55e',
   },
@@ -49,6 +52,7 @@ const projects: Project[] = [
     alt: 'SkyTech project preview',
     demoLink: 'https://bedirgcmz-skytech.netlify.app/',
     stack: ['React', 'i18n', 'EmailJS', 'Motion'],
+    facts: ['3 languages', 'Lead forms', 'Course platform'],
     impact: 'Education platform',
     accent: '#38bdf8',
   },
@@ -60,6 +64,7 @@ const projects: Project[] = [
     alt: 'Parking Time project preview',
     demoLink: 'https://parking-time-next.vercel.app/',
     stack: ['Next.js', 'TypeScript', 'CMS', 'API'],
+    facts: ['Team project', 'Contentful CMS', 'Reusable UI'],
     impact: 'Product build',
     accent: '#f59e0b',
   },
@@ -71,6 +76,7 @@ const projects: Project[] = [
     alt: 'Rosa Taxi project preview',
     demoLink: 'https://www.rosetravel.co.uk/',
     stack: ['React', 'UX', 'Branding', 'EmailJS'],
+    facts: ['Client work', 'Custom brand', 'Booking intent'],
     impact: 'Client delivery',
     accent: '#fb7185',
   },
@@ -82,6 +88,7 @@ const projects: Project[] = [
     alt: 'Portfolio project preview',
     demoLink: 'https://bedirgocmez.com',
     stack: ['Next.js', 'TypeScript', 'A11y', 'Tailwind'],
+    facts: ['Static export', 'Dark mode', 'Motion system'],
     impact: 'Personal brand',
     accent: '#2dd4bf',
   },
@@ -175,6 +182,14 @@ export default function ProudOfProjects() {
                     <span key={item}>{item}</span>
                   ))}
                 </div>
+                <dl className={styles.facts} aria-label={`${project.title} highlights`}>
+                  {project.facts.map((fact) => (
+                    <div key={fact}>
+                      <dt>Highlight</dt>
+                      <dd>{fact}</dd>
+                    </div>
+                  ))}
+                </dl>
                 {project.demoLink ? (
                   <a href={project.demoLink} target="_blank" rel="noreferrer">
                     {project.linkLabel || 'View live project'}
