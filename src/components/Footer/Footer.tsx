@@ -2,6 +2,7 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
 import styles from './Footer.module.css';
 import VisitorCount from '../VisitorCount/VisitorCount';
 
@@ -11,8 +12,22 @@ export default function Footer() {
   return (
     <footer className={styles.footer} role="contentinfo">
       <div className={styles.container}>
-        <div className='flex items-center justify-around gap-6'>
-          {/* Left: Nav Links */}
+        <div className={styles.brandPanel}>
+          <p className={styles.kicker}>Full-Stack Developer</p>
+          <h2>Building useful products with React, Next.js, TypeScript and care.</h2>
+          <div className={styles.actions}>
+            <a href="mailto:bedirgocmez@gmail.com">
+              <FontAwesomeIcon icon={faEnvelope} className={styles.actionIcon} />
+              Email me
+            </a>
+            <a href="/assets/Bedir-Gocmez-CV.pdf" download>
+              <FontAwesomeIcon icon={faFileArrowDown} className={styles.actionIcon} />
+              Download CV
+            </a>
+          </div>
+        </div>
+
+        <div className={styles.linkPanel}>
           <nav className={styles.nav} aria-label="Footer navigation">
             {navItems.map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`} className={styles.link}>
@@ -21,7 +36,6 @@ export default function Footer() {
             ))}
           </nav>
 
-          {/* Center: Social Icons */}
           <div className={styles.social}>
             <a
               href="https://github.com/bedirgcmz"
@@ -42,9 +56,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Right: Copyright */}
         <div className={styles.copyright}>
-          <p>&copy; 2025 Bedir Gocmez. Crafted with ❤️ using Next.js</p>
+          <p>&copy; 2026 Bedir Gocmez. Crafted with Next.js.</p>
           <span className='hidden'><VisitorCount /></span>
         </div>
       </div>
