@@ -1,31 +1,50 @@
 import Image from 'next/image';
+import styles from './About.module.css';
+
+const strengths = [
+  {
+    title: 'Product Thinking',
+    text: 'I care about the user flow, the business goal, and the tiny interaction details that make software feel trustworthy.',
+  },
+  {
+    title: 'Full-Stack Delivery',
+    text: 'I move comfortably from polished React interfaces to APIs, data flows, auth, integrations, and deployment details.',
+  },
+  {
+    title: 'Clear Collaboration',
+    text: 'I ask the right questions, communicate tradeoffs clearly, and keep momentum without losing quality.',
+  },
+];
 
 export default function WhoIAm() {
 
   return (
     <section
       aria-labelledby="who-i-am-heading"
-      className="w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12 mx-auto mb-12 text-gray-700 dark:text-gray-300 transition-colors duration-300 "
+      className={`w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12 mx-auto mb-12 text-gray-700 dark:text-gray-300 transition-colors duration-300 ${styles.whoIAm}`}
     >
-      <Image src={"/images/global/who-i-am.jpg"} alt='Bedir Gocmez' width={215} height={280} className='border border-2 border-[var(--color-active)] hover:scale-105 transitin duration-300 rounded-full'/>
-        <div className='max-w-[670px] relative'>
+      <div className={styles.portraitWrap}>
+        <Image src={"/images/global/who-i-am.jpg"} alt='Bedir Gocmez' width={260} height={330} className={styles.aboutPortrait}/>
+      </div>
+        <div className={`max-w-[720px] relative ${styles.aboutCopy}`}>
+            <p className={styles.aboutKicker}>Beyond the code</p>
             <h2
                 id="who-i-am-heading"
                 className="text-3xl md:text-4xl font-bold mb-4 text-[#1a7b81] dark:text-white z-[2]"
             >
-                Who I Am
+                I build like a developer, think like a product teammate.
             </h2>
             <p className="text-base md:text-lg leading-relaxed z-[2] text-justify">
                 I&#39;m a Full-Stack Developer based in Stockholm, passionate about crafting responsive, accessible, and product-minded web applications with React, Next.js, TypeScript, APIs, and modern backend tools. My journey into tech began after years in education, where I honed my skills in communication and problem-solving. This background enriches my approach to development, emphasizing user-centric design and collaboration.
             </p>
-            <p className="text-base md:text-lg leading-relaxed mt-4 z-[2] text-justify">
-                Beyond coding, I enjoy exploring the vibrant culture of Stockholm, engaging in outdoor activities, and continuously learning about the latest advancements in AI and web technologies. I&#39;m always eager to take on new challenges and contribute to meaningful projects that make a difference.
-            </p>
-      <Image src={"/images/icons/react.png"} alt='skills' width={80} height={80} className='absolute top-[10%] left-[10%] z-[1] opacity-[0.2]'/>
-      <Image src={"/images/icons/nextjs.png"} alt='skills' width={80} height={80} className='absolute top-[40%] left-[40%] z-[1] opacity-[0.2]'/>
-      <Image src={"/images/icons/js.png"} alt='skills' width={80} height={80} className='absolute top-[80%] left-[20%] z-[1] opacity-[0.2]'/>
-      <Image src={"/images/icons/typescript.png"} alt='skills' width={80} height={80} className='absolute top-[30%] left-[70%] z-[1] opacity-[0.2]'/>
-      <Image src={"/images/icons/nodejs.png"} alt='skills' width={80} height={80} className='absolute top-[85%] right-[10%] z-[1] opacity-[0.2]'/>
+            <div className={styles.strengthGrid}>
+              {strengths.map((strength) => (
+                <article key={strength.title}>
+                  <h3>{strength.title}</h3>
+                  <p>{strength.text}</p>
+                </article>
+              ))}
+            </div>
         </div>
     </section>
   );
