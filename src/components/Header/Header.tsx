@@ -23,6 +23,7 @@ export default function Header() {
   const { theme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeHash, setActiveHash] = useState('');
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -48,6 +49,17 @@ export default function Header() {
   
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 16);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   
   
 
@@ -55,9 +67,9 @@ export default function Header() {
 
   return (
     <header
-      className={`w-screen fixed top-0 z-50 transition-colors duration-300 max-w-[100vw] bg-[#F9F5F2] text-gray-700 dark:bg-primary dark:text-white ${styles.header}`}
+      className={`w-screen fixed top-0 z-50 max-w-[100vw] text-gray-700 dark:text-white ${styles.header} ${isScrolled ? styles.scrolled : ''}`}
     >
-      <div className="max-w-[1600px] mx-auto px-2 sm:px-4 max-xs:px-1 tablet-only:px-1 py-3 flex justify-between items-center">
+      <div className={`${styles.inner} max-w-[1600px] mx-auto px-2 sm:px-4 max-xs:px-1 tablet-only:px-1 flex justify-between items-center`}>
         <div className="flex items-center gap-3">
           <Image
             src="/images/global/profile-logo.jpeg"
@@ -105,9 +117,9 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <nav
-        className={`md:hidden fixed top-0 right-0 w-[min(80vw,260px)] h-screen z-50 transition-transform duration-300 transform ${
+        className={`md:hidden fixed top-0 right-0 w-[min(82vw,280px)] h-screen z-50 transition-transform duration-300 transform ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-[100vw]'
-        } ${theme === 'dark' ? 'bg-primary text-white' : 'bg-white text-black'} shadow-lg p-6`}
+        } ${theme === 'dark' ? 'text-white' : 'text-black'} ${styles.mobileMenu} shadow-lg p-6`}
       >
         <button onClick={() => setIsMenuOpen(false)} className='absolute top-[44px] left-[25px]' aria-label='Close Navbar'>
             <FontAwesomeIcon icon={faCircleXmark} className='h-[27px]'/>
