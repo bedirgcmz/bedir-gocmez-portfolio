@@ -29,8 +29,17 @@ export default function References() {
 
   return (
     <section className={styles.section} aria-labelledby="references-title">
-      <h2 id="references-title text-2xl" className={styles.sectionTitle}>What People Say</h2>
-      <p className={styles.subtitle}>Reliable, adaptable, and valued — here&#39;s what others think.</p>
+      <div className={styles.header}>
+        <p className={styles.eyebrow}>Trusted by teams</p>
+        <h2 id="references-title" className={styles.sectionTitle}>What People Say</h2>
+        <p className={styles.subtitle}>A few signals from people I have learned with, built with, and shipped alongside.</p>
+      </div>
+
+      <div className={styles.proofStrip} aria-label="Professional proof points">
+        <span>Fast learner</span>
+        <span>Solution-oriented</span>
+        <span>Clear communication</span>
+      </div>
 
       {!references ? (
         <div className={styles.loadingWrapper}>
@@ -48,9 +57,10 @@ export default function References() {
           }}
           spaceBetween={30}
           loop
+          autoplay={{ delay: 3500, pauseOnMouseEnter: true }}
           pagination={{ clickable: true }}
           navigation
-          className="rounded-lg"
+          className={styles.slider}
           style={{ paddingBottom: '40px', padding: '20px' }}
         >
           {references.map((ref, i) => (

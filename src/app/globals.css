@@ -34,6 +34,48 @@ body {
 .dark body {
   @apply bg-primary text-white;
 }
+
+.ambient-glow {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  width: min(74vw, 860px);
+  height: min(74vw, 860px);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  background:
+    radial-gradient(circle at 50% 50%, rgba(35, 179, 187, 0.16), rgba(35, 179, 187, 0.06) 34%, transparent 66%),
+    conic-gradient(from 120deg, transparent, rgba(255, 131, 0, 0.08), transparent, rgba(35, 179, 187, 0.1), transparent);
+  filter: blur(32px);
+  opacity: 1;
+  animation: ambientGlowDrift 28s ease-in-out infinite;
+}
+
+.dark .ambient-glow {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(35, 179, 187, 0.22), rgba(35, 179, 187, 0.08) 34%, transparent 66%),
+    conic-gradient(from 120deg, transparent, rgba(255, 131, 0, 0.09), transparent, rgba(35, 179, 187, 0.12), transparent);
+  opacity: 1;
+}
+
+@keyframes ambientGlowDrift {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(0.96);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(18deg) scale(1.04);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-glow {
+    animation: none;
+  }
+}
 .bg-btn-bg-hover {
   transition: all 0.2s ease-in-out;
 }

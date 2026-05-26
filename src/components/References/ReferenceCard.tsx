@@ -11,7 +11,7 @@ type Props = {
 
 export default function ReferenceCard({ name, role, quote, image, stars }: Props) {
   return (
-    <div className='relative pt-[60px]'>
+    <div className={styles.cardShell}>
         <Image
             src={`${image}`}
             alt={`${name}'s profile`}
@@ -20,13 +20,14 @@ export default function ReferenceCard({ name, role, quote, image, stars }: Props
             className={styles.avatar}
         />
         <div className={styles.card} aria-label={`Reference from ${name}`}>
+        <div className={styles.quoteMark} aria-hidden="true">“</div>
         <div className='flex flex-col h-[90%] pt-2'>
             <h3 className={`${styles.name} max-xs:text-[16px]`}>{name}</h3>
             <p className={`${styles.role}  max-xs:text-[14px]`}>{role}</p>
             <p className={`${styles.summary} max-xs:text-[12px]`}>{quote}</p>
-            <div className={styles.stars}>
+            <div className={styles.stars} aria-label={`${stars} out of 5 stars`}>
             {Array.from({ length: stars }).map((_, i) => (
-                <span key={i}>⭐</span>
+                <span key={i} aria-hidden="true">★</span>
             ))}
             </div>
         </div>

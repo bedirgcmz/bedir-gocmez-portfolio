@@ -45,6 +45,7 @@ export default async function RootLayout({
         ></script>
       </head>
       <body className='pt-[70px]'>
+        <div className="ambient-glow" aria-hidden="true" />
         <ThemeProvider serverTheme={theme}>
           <SmoothScroll />
           {children}

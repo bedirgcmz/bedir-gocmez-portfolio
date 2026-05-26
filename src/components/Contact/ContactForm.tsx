@@ -60,7 +60,7 @@ const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
         whileTap={{ scale: 0.95 }}
         aria-label="Send message"
       >
-        {isSent ? 'Sent ✔' : 'Send Message'}
+        {isSent ? 'Message sent' : 'Send Message'}
       </motion.button>
       <ToastContainer />
     </form>
