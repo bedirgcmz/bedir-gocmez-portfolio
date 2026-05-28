@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/context/ThemeContext'
 import 'react-toastify/dist/ReactToastify.css';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import SmoothScroll from "@/components/SmoothScroll";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space' });
@@ -47,6 +48,7 @@ export default async function RootLayout({
       <body className='pt-[70px]'>
         <div className="ambient-glow" aria-hidden="true" />
         <ThemeProvider serverTheme={theme}>
+          <ScrollProgress />
           <SmoothScroll />
           {children}
         </ThemeProvider>

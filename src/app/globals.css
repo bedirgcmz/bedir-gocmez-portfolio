@@ -65,6 +65,26 @@ body {
   opacity: 1;
 }
 
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 3px;
+  pointer-events: none;
+  background: rgba(15, 118, 110, 0.12);
+}
+
+.scroll-progress__bar {
+  width: 100%;
+  height: 100%;
+  transform-origin: left center;
+  background: linear-gradient(90deg, var(--color-hover), var(--color-active), var(--color-lighter));
+  box-shadow: 0 0 18px rgba(45, 212, 191, 0.45);
+  transition: transform 0.12s ease-out;
+}
+
 @keyframes ambientGlowDrift {
   0%,
   100% {
