@@ -50,7 +50,7 @@ const projects: Project[] = [
     description:
       'A responsive learning platform for children, built with React, multilingual content, EmailJS, Google Sheets submissions, and polished Framer Motion interactions.',
     alt: 'SkyTech project preview',
-    demoLink: 'https://bedirgcmz-skytech.netlify.app/',
+    demoLink: 'https://skyeducationacademy.com/',
     stack: ['React', 'i18n', 'EmailJS', 'Motion'],
     facts: ['3 languages', 'Lead forms', 'Course platform'],
     impact: 'Education platform',
@@ -62,7 +62,7 @@ const projects: Project[] = [
     description:
       'A parking management product built in a cross-functional team with Next.js, TypeScript, Tailwind, Contentful CMS, reusable components, and API integrations.',
     alt: 'Parking Time project preview',
-    demoLink: 'https://parking-time-next.vercel.app/',
+    demoLink: 'https://www.parkingtime.se/en',
     stack: ['Next.js', 'TypeScript', 'CMS', 'API'],
     facts: ['Team project', 'Contentful CMS', 'Reusable UI'],
     impact: 'Product build',

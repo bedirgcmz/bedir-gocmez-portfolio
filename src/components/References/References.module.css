@@ -174,8 +174,8 @@
 }
 
 :global(.dark) .avatar {
-  border-color: rgba(255, 255, 255, 0.12);
-  background-color: #071013;
+  border-color: #359a90;
+  background-color: #359a90;
 }
 
 .name {
