@@ -22,7 +22,7 @@ export default function ParticlesBackground() {
     fullScreen: { enable: false, zIndex: -1 },
     background: {
       color: {
-        value: theme === 'dark' ? '#004046' : '#F9F5F2',
+        value: theme === 'dark' ? '#071013' : '#f8faf8',
       },
     },
     particles: {
@@ -30,10 +30,10 @@ export default function ParticlesBackground() {
         value: 250,
         density: { enable: true, area: 800 },
       },
-      color: { value: '#33bbc5' },
+      color: { value: '#2dd4bf' },
       links: {
         enable: true,
-        color: '#33bbc5',
+        color: '#2dd4bf',
         distance: 150,
         opacity: 0.5,
         width: 1,

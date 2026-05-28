@@ -30,7 +30,7 @@ export default function WhoIAm() {
             <p className={styles.aboutKicker}>Beyond the code</p>
             <h2
                 id="who-i-am-heading"
-                className="text-3xl md:text-4xl font-bold mb-4 text-[#1a7b81] dark:text-white z-[2]"
+                className="text-3xl md:text-4xl font-bold mb-4 text-[var(--color-active)] dark:text-white z-[2]"
             >
                 I build like a developer, think like a product teammate.
             </h2>

@@ -34,7 +34,7 @@ const fromBottomVariants = {
                     >
                       Full-Stack Developer - Stockholm
                     </motion.p>
-                    <h1 className="w-full max-xs:text-3xl text-4xl lg:text-5xl font-bold mb-4 z-10 md:text-left text-[#1a7b81] dark:text-[var(--color-active)] ">
+                    <h1 className="w-full max-xs:text-3xl text-4xl lg:text-5xl font-bold mb-4 z-10 md:text-left text-[var(--color-active)] dark:text-[var(--color-active)] ">
                         I build full-stack products with polished interfaces and reliable foundations.{' '} <br />
                         <span className="text-[var(--color-hover)]"><TypeText words={["Bedir Gocmez", "Full-Stack Developer"]} loop={true}/></span>
                     </h1>

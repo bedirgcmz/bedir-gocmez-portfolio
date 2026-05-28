@@ -41,7 +41,7 @@
     top: 6px;
     width: calc(100% - 12px);
     height: calc(100% - 12px);
-    background: #004046;
+    background: var(--color-page);
     border-radius: 25px;
   }
   
@@ -52,7 +52,7 @@
     width: 100vw;
     max-width: 100vw;
     height: 100%;
-    background: rgba(0, 64, 70, 0.9);
+    background: rgba(7, 16, 19, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;

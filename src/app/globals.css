@@ -6,20 +6,25 @@
 :root {
   --font-main: var(--font-inter);
   --font-accent: var(--font-space);
-  --color-active: #1a7b81;
-  --color-hover: #ff8300;
-  --color-hover-darker: #af5900;
-  --color-active-darker: #1a7b81;
-  --color-lighter: #af5900;
-
+  --color-active: #0f766e;
+  --color-active-darker: #115e59;
+  --color-hover: #f59e0b;
+  --color-hover-darker: #d97706;
+  --color-lighter: #d97706;
+  --color-page: #f8faf8;
+  --color-text: #1f2937;
+  --color-card: rgba(255, 255, 255, 0.82);
 }
-.dark {
-  --color-active: #ff8300;
-  --color-active-darker: #af5900;
-  --color-hover: #1a7b81;
-  --color-hover-darker: #1a7b81;
-  --color-lighter: #23b3bb;
 
+.dark {
+  --color-active: #f59e0b;
+  --color-active-darker: #d97706;
+  --color-hover: #2dd4bf;
+  --color-hover-darker: #14b8a6;
+  --color-lighter: #5eead4;
+  --color-page: #071013;
+  --color-text: #f8fafc;
+  --color-card: rgba(255, 255, 255, 0.06);
 }
 
 html {
@@ -27,7 +32,7 @@ html {
 }
 
 body {
-  @apply bg-[#F9F5F2] text-[gray-700] transition-colors duration-300;
+  @apply bg-[var(--color-page)] text-[var(--color-text)] transition-colors duration-300;
   font-family: var(--font-main), sans-serif;
 }
 
@@ -46,8 +51,8 @@ body {
   pointer-events: none;
   transform: translate(-50%, -50%) rotate(0deg) scale(1);
   background:
-    radial-gradient(circle at 50% 50%, rgba(35, 179, 187, 0.16), rgba(35, 179, 187, 0.06) 34%, transparent 66%),
-    conic-gradient(from 120deg, transparent, rgba(255, 131, 0, 0.08), transparent, rgba(35, 179, 187, 0.1), transparent);
+    radial-gradient(circle at 50% 50%, rgba(45, 212, 191, 0.16), rgba(45, 212, 191, 0.06) 34%, transparent 66%),
+    conic-gradient(from 120deg, transparent, rgba(245, 158, 11, 0.08), transparent, rgba(45, 212, 191, 0.1), transparent);
   filter: blur(32px);
   opacity: 1;
   animation: ambientGlowDrift 28s ease-in-out infinite;
@@ -55,8 +60,8 @@ body {
 
 .dark .ambient-glow {
   background:
-    radial-gradient(circle at 50% 50%, rgba(35, 179, 187, 0.22), rgba(35, 179, 187, 0.08) 34%, transparent 66%),
-    conic-gradient(from 120deg, transparent, rgba(255, 131, 0, 0.09), transparent, rgba(35, 179, 187, 0.12), transparent);
+    radial-gradient(circle at 50% 50%, rgba(45, 212, 191, 0.22), rgba(45, 212, 191, 0.08) 34%, transparent 66%),
+    conic-gradient(from 120deg, transparent, rgba(245, 158, 11, 0.09), transparent, rgba(45, 212, 191, 0.12), transparent);
   opacity: 1;
 }
 
