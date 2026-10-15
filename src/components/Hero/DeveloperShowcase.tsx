@@ -9,13 +9,13 @@ import styles from './DeveloperShowcase.module.css';
 const codeLines = [
   { token: 'const', text: ' developer = {' },
   { token: 'role', text: "  role: 'Full-Stack Developer'," },
-  { token: 'stack', text: "  stack: ['React', 'Next.js', 'TypeScript', 'Node.js']," },
+  { token: 'stack', text: "  stack: ['React', 'Next.js', 'TypeScript', 'React Native']," },
   { token: 'focus', text: "  focus: 'Polished products, end to end'," },
   { token: 'ship', text: '  ship: () => buildForUsers(),' },
   { token: 'end', text: '};' },
 ];
 
-const badges = ['React', 'Next.js', 'TypeScript', 'Node.js', 'APIs', 'A11y'];
+const badges = ['React', 'Next.js', 'TypeScript', 'React Native', 'Supabase', 'A11y'];
 
 export default function DeveloperShowcase() {
   const { theme } = useTheme();

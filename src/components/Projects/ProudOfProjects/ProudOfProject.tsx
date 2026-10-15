@@ -24,11 +24,11 @@ const projects: Project[] = [
     title: 'Parlio',
     url: 'parlio',
     description:
-      'A full language learning product that turns your own sentences into real practice with AI translation, flashcards, quizzes, listening, sentence building, dialogs, games, XP, and premium flows.',
+      'A launched multilingual React Native learning app with seven languages, subscriptions, offline functionality, and Supabase integration. Turns your own sentences into practice with AI translation, flashcards, quizzes, and listening.',
     alt: 'Parlio app preview',
     demoLink: 'https://parlio-app.netlify.app/',
-    stack: ['React Native', 'TypeScript', 'AI', 'Product UX'],
-    facts: ['iOS + Android', '7 languages', 'AI practice flow'],
+    stack: ['React Native', 'TypeScript', 'Supabase', 'AI'],
+    facts: ['7 languages', 'Offline learning', 'Subscriptions'],
     impact: 'Language learning app',
     accent: '#8b5cf6',
   },
@@ -45,11 +45,11 @@ const projects: Project[] = [
     accent: '#22c55e',
   },
   {
-    title: 'SkyTech',
+    title: 'SkyEducation',
     url: 'sky',
     description:
       'A responsive learning platform for children, built with React, multilingual content, EmailJS, Google Sheets submissions, and polished Framer Motion interactions.',
-    alt: 'SkyTech project preview',
+    alt: 'SkyEducation project preview',
     demoLink: 'https://skyeducationacademy.com/',
     stack: ['React', 'i18n', 'EmailJS', 'Motion'],
     facts: ['3 languages', 'Lead forms', 'Course platform'],
@@ -62,7 +62,7 @@ const projects: Project[] = [
     description:
       'A parking management product built in a cross-functional team with Next.js, TypeScript, Tailwind, Contentful CMS, reusable components, and API integrations.',
     alt: 'Parking Time project preview',
-    demoLink: 'https://www.parkingtime.se/en',
+    demoLink: 'https://parking-time-next.vercel.app/',
     stack: ['Next.js', 'TypeScript', 'CMS', 'API'],
     facts: ['Team project', 'Contentful CMS', 'Reusable UI'],
     impact: 'Product build',
@@ -151,6 +151,9 @@ export default function ProudOfProjects() {
       <div className={styles.header} data-project-heading>
         <p>Selected work</p>
         <h2 id="featured-projects-title">Projects that show how I build</h2>
+        <p>
+          Also delivered: <a href="https://yormio-app.netlify.app/" target="_blank" rel="noreferrer" className="underline underline-offset-4">Yormio</a>.
+        </p>
       </div>
 
       <div className={styles.showcase}>

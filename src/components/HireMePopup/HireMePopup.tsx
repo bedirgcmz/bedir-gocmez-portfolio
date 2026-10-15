@@ -93,7 +93,7 @@ const HireMePopup = () => {
           <div className={styles.popupContent}>
             <h2 id="hire-me-heading" className="sr-only">Hire Me</h2>
             <a 
-              href={`mailto:bedirgocmez@gmail.com?subject=${subject}&body=${body}`}
+              href={`mailto:bdrgcmz@gmail.com?subject=${subject}&body=${body}`}
               className={styles.hireMeButton}
               aria-label="Send email to hire me"
             >

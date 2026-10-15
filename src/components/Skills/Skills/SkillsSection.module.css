@@ -146,3 +146,51 @@
         inset: 6% 0;
     }
       }
+
+.technicalGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.technicalCard {
+    padding: clamp(20px, 3vw, 32px);
+    border: 1px solid var(--color-active);
+    border-radius: 16px;
+    background: var(--color-page);
+}
+
+.technicalCard:last-child {
+    grid-column: 1 / -1;
+}
+
+.technicalCard h3 {
+    color: var(--color-lighter);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.technicalCard ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.technicalCard li {
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: var(--color-active-darker);
+    color: white;
+    font-size: 0.9rem;
+}
+
+:global(.dark) .technicalCard h3 {
+    color: white;
+}
+
+@media (max-width: 640px) {
+    .technicalGrid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}

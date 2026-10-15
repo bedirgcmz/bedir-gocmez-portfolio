@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import styles from "./Experience.module.css";
 
 interface ExperienceCardProps {
+  className?: string;
   company: string;
   role: string;
   description: string;
@@ -14,6 +15,7 @@ interface ExperienceCardProps {
 }
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({
+  className = "",
   company,
   role,
   description,
@@ -36,7 +38,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
 
   return (
     <motion.article
-      className={`relative rounded-md shadow-md max-xs:w-[270px] w-[310px] sm:w-[380px] max-w-md bg-white dark:bg-zinc-800 text-gray-800 dark:text-gray-200  ${styles.card}`}
+      className={`relative rounded-md shadow-md w-full sm:w-[380px] lg:w-full max-w-[380px] min-w-0 bg-white dark:bg-zinc-800 text-gray-800 dark:text-gray-200  ${styles.card} ${className}`}
       initial="hidden"
       whileInView="visible"
       variants={animation}
@@ -50,7 +52,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
         {iconClass && <i className={`${iconClass}`} aria-hidden="true" />}
         <span>{company}</span>
       </header>
-      <div className="px-4 py-3 bg-white text-gray-500 h-[135px]">
+      <div className="px-4 py-3 bg-white text-gray-600 min-h-[185px]">
         <h3 className="font-bold text-lg flex items-center gap-2 max-xs:text-[16px]">{role}</h3>
         <p className="text-sm mt-2 max-xs:text-[12px]">{description}</p>
       </div>

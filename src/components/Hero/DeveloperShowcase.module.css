@@ -211,6 +211,10 @@
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
 }
 
+:global(.light) .badgeCloud span {
+  color: var(--color-active-darker);
+}
+
 @keyframes orbitPulse {
   0%,
   100% {

@@ -44,7 +44,7 @@ const fromBottomVariants = {
                       whileInView="visible"
                       viewport={{ once: true, amount: 0.2 }}
                       className="text-lg md:text-1xl lg:text-2xl mb-6 text-gray-600 dark:text-gray-300 z-10 md:text-left max-w-[95vw] md:max-w-[365px] lg:max-w-[450px]">
-                      I turn ideas into responsive web and mobile experiences with React, Next.js, TypeScript, APIs, and a strong eye for product detail.
+                      I build production web and mobile applications with React, Next.js, TypeScript, and React Native — from reusable interfaces and REST APIs to deployment.
                     </motion.p>
                     <div className='flex gap-6 items-center'>
                         <a href="#about" className="bg-[var(--color-active)] dark:bg-[var(--color-active-darker)] bg-btn-bg-hover max-xs:px-1 max-xs:py-1 flex gap-2 items-center justify-center text-white w-[140px] px-2 py-3 rounded-full z-10 animated hover:scale-105 transition font-semibold">

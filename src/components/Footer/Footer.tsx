@@ -14,9 +14,9 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.brandPanel}>
           <p className={styles.kicker}>Full-Stack Developer</p>
-          <h2>Building useful products with React, Next.js, TypeScript and care.</h2>
+          <h2>Building useful web and mobile products with React, Next.js, TypeScript and React Native.</h2>
           <div className={styles.actions}>
-            <a href="mailto:bedirgocmez@gmail.com">
+            <a href="mailto:bdrgcmz@gmail.com">
               <FontAwesomeIcon icon={faEnvelope} className={styles.actionIcon} />
               Email me
             </a>

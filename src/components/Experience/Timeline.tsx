@@ -7,7 +7,7 @@ import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const milestones = ["2025", "2020", "2016", "2011"];
+const milestones = ["Aug 2025", "Jun 2025", "Jan 2025", "Sep 2022"];
 
 const Timeline: React.FC = () => {
   const wrapperRef = useRef<HTMLDivElement | null>(null);

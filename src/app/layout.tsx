@@ -12,7 +12,7 @@ const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space
 
 export const metadata: Metadata = {
   title: "Bedir Gocmez",
-  description: "Bedir Gocmez's full-stack developer portfolio with React, Next.js, TypeScript, APIs, and accessible product-focused web experiences."
+  description: "Bedir Gocmez, Full-Stack Developer in Stockholm. Production web and mobile applications with React, Next.js, TypeScript, React Native, and accessible UI."
 };
 
 export default async function RootLayout({

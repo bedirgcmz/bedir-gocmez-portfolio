@@ -1,35 +1,26 @@
 [
-    {
-      "id": 1,
-      "icon": "faCode",
-      "title": "Frontend / App Developer",
-      "company": "Changemaker Educations",
-      "description": "Agile method, team collaboration, Jira usage. Learned React, Next.js, TypeScript, Supabase, Git, Tailwind CSS, and accessibility best practices. Working on real-world projects in a team.",
-      "date": "09.2023 – 06.2025"
-    },
-    {
-      "id": 2,
-      "icon": "faLaptopCode",
-      "title": "Full Stack Web Developer",
-      "company": "HiCoders",
-      "description": "End-to-end project development. Learned HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, MySQL. Built fullstack project as final assignment.",
-      "date": "08.2021 – 07.2022"
-    },
-    {
-      "id": 3,
-      "icon": "faPersonWalkingArrowRight",
-      "title": "Student Coaching",
-      "company": "Career World",
-      "description": "Online education and international certification. Remote exams and digital course management.",
-      "date": "10.2018 – 12.2018"
-    },
-    {
-      "id": 4,
-      "icon": "faPersonChalkboard",
-      "title": "Teacher (Master)",
-      "company": "Çanakkale Onsekiz Mart University",
-      "description": "Thesis: Effect of debate techniques on student success and critical thinking. 2-year academic research.",
-      "date": "09.2014 – 07.2016"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "icon": "faCode",
+    "title": "Frontend / App Developer Program",
+    "company": "Futuregames · Sweden",
+    "description": "Frontend and app development, 2023–2025.",
+    "date": "2023 – 2025"
+  },
+  {
+    "id": 2,
+    "icon": "faLaptopCode",
+    "title": "Fullstack Web Developer",
+    "company": "HiCoders · Switzerland",
+    "description": "Fullstack web development, 2021–2022.",
+    "date": "2021 – 2022"
+  },
+  {
+    "id": 3,
+    "icon": "faPersonChalkboard",
+    "title": "Primary Education (BA & MA)",
+    "company": "Çanakkale Onsekiz Mart University · Turkey",
+    "description": "Bachelor’s and master’s degrees in Primary Education.",
+    "date": "2007 – 2016"
+  }
+]

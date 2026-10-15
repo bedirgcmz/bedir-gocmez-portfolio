@@ -61,7 +61,7 @@ export default function Educations() {
     <section className={styles.wrapper} aria-labelledby="edu-heading">
       {loading ? (
         <div className={styles.loaderWrapper}>
-          {[1, 2, 3, 4].map((n) => (
+          {[1, 2, 3].map((n) => (
                 <div key={n} className={styles.skeletonCard}></div>
           ))}
         </div>
@@ -82,7 +82,7 @@ export default function Educations() {
                 <FontAwesomeIcon icon={iconMap[edu.icon] ?? faCode} />
               </div>
               <div className={styles.iconBoxLeft}>
-                {4 - index}
+                {data.length - index}
               </div>
               <div className={styles.content}>
                 <div>

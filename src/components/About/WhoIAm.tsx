@@ -8,11 +8,11 @@ const strengths = [
   },
   {
     title: 'Full-Stack Delivery',
-    text: 'I move comfortably from polished React interfaces to APIs, data flows, auth, integrations, and deployment details.',
+    text: 'I build web and mobile applications with React and React Native, connect REST APIs and Supabase, and take products through deployment.',
   },
   {
     title: 'Clear Collaboration',
-    text: 'I ask the right questions, communicate tradeoffs clearly, and keep momentum without losing quality.',
+    text: 'I work with Swedish and international Agile teams through code reviews, reusable components, and production releases.',
   },
 ];
 
@@ -35,7 +35,7 @@ export default function WhoIAm() {
                 I build like a developer, think like a product teammate.
             </h2>
             <p className="text-base md:text-lg leading-relaxed z-[2] text-justify">
-                I&#39;m a Full-Stack Developer based in Stockholm, passionate about crafting responsive, accessible, and product-minded web applications with React, Next.js, TypeScript, APIs, and modern backend tools. My journey into tech began after years in education, where I honed my skills in communication and problem-solving. This background enriches my approach to development, emphasizing user-centric design and collaboration.
+                I&#39;m a Full-Stack Developer based in Stockholm, building production web and mobile applications with React, Next.js, TypeScript, and React Native. At Data Forte AB, I develop logistics dashboards and cross-platform fleet and delivery interfaces. I also work part-time at Boldwealth on Next.js architecture and multilingual SEO. My background in education brings clear communication, empathy, and a focus on the people using what I build.
             </p>
             <div className={styles.strengthGrid}>
               {strengths.map((strength) => (

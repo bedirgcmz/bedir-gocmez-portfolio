@@ -7,27 +7,29 @@ const ExperienceSection: React.FC = () => {
   return (
     <section
       className="py-12 min-h-[1020px] md:min-h-[900px] px-4 md:px-16 lg:px-24 flex flex-col items-center overflow-x-hidden"
-      aria-label="Work and teaching experiences timeline"
+      aria-label="Professional experience timeline"
     >
 
-    <div className="flex flex-col lg:flex-row relative justify-center items-start gap-10 w-full max-xxs:ps-[55px] sm:ps-[62px] ps-[70px] md:ps-[110px]">
+    <div className="grid lg:flex lg:flex-row relative justify-center items-start gap-10 w-full min-w-0 max-xxs:ps-[55px] sm:ps-[62px] ps-[70px] md:ps-[110px]">
         {/* Left Cards */}
-        <div className="flex flex-col gap-8 lg:gap-36 items-end flex-1 md:w-[380px]">
+        <div className="contents lg:flex lg:flex-col lg:gap-36 lg:items-end lg:flex-1 lg:w-[380px] lg:min-w-0">
           <ExperienceCard
-          company="Boldwealth"
-          role="Full-Stack Developer"
-          description="Refactored a Next.js 15 project with server components and multilingual SEO, and continue to develop it further in my current role."
-          date="Jun 2025 – Present"
+          className="order-1"
+          company="Data Forte AB · Stockholm"
+          role="Fullstack Developer (Consultant)"
+          description="Build React and TypeScript logistics dashboards with React Query and Redux Toolkit, React Native/Expo fleet interfaces with offline and location-based workflows, and reusable Tailwind components."
+          date="Aug 2025 – Present"
           iconClass="fa-solid fa-building"
           direction="left"
           delay={0.4}
           />
         
         <ExperienceCard
-            company="Freelancer"
-            role="Full-Stack Developer"
-            description="Built custom web & mobile apps using React, Next.js, and React Native. Delivered client projects end-to-end."
-            date="Sep 2022 – Present"
+            className="order-3"
+            company="Custellence · Stockholm"
+            role="Frontend Developer Intern (LIA)"
+            description="Built production B2B features with React, TypeScript, Material UI, AngularJS, and Vue.js. Integrated an AI-powered content generator while maintaining WCAG accessibility standards."
+            date="Jan 2025 – Jul 2025"
             iconClass="fa-solid fa-building"
             direction="right"
             delay={0.6}
@@ -38,22 +40,24 @@ const ExperienceSection: React.FC = () => {
         <Timeline />
 
         {/* Right Cards */}
-        <div className="flex flex-col gap-8 lg:gap-36 items-start flex-1 w-[380px] lg:mt-[160px]">
+        <div className="contents lg:flex lg:flex-col lg:gap-36 lg:items-start lg:flex-1 lg:w-[380px] lg:min-w-0 lg:mt-[160px]">
             <ExperienceCard
-            company="Custellence"
-            role="Product Developer (Intern)"
-            description="Built AI-powered features, integrated APIs, and delivered dozens of UI/UX improvements in a live B2B React platform. All contributions are now in production."
-            date="Jan 2025 – Jul 2025"
+            className="order-2"
+            company="Boldwealth · Remote, Atlanta"
+            role="Frontend Developer (Part-time)"
+            description="Refactor Next.js 15 architecture with Server Components, modular client/server structures, and reusable layouts. Implement dynamic metadata and EN/TR SEO and Open Graph strategies."
+            date="Jun 2025 – Present"
             iconClass="fa-solid fa-building"
             direction="right"
             delay={0.4}
             />
 
         <ExperienceCard
-            company="Rainbow Schools & MEM Edicational Ins."
-            role="Teacher & IT Support Specialist"
-            description="Led digital transformation in education; provided IT support, created learning materials, and trained staff in tech tools."
-            date="Sep 2011 – Jul 2014"
+            className="order-4"
+            company="Freelance · Stockholm"
+            role="Frontend Developer (Freelancer)"
+            description="Built and launched Parlio, a seven-language React Native app with subscriptions, offline functionality, and Supabase. Delivered Yormio, SkyEducation, SimpleTask, and Parkingtime."
+            date="Sep 2022 – Aug 2026"
             iconClass="fa-solid fa-building"
             direction="left"
             delay={0.2}

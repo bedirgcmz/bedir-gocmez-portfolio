@@ -1,18 +1,11 @@
-"use client"
-import React from 'react'
-import ProudOfProjects from './ProudOfProjects/ProudOfProject'
-import SchoolProjects from './SchoolProject/SchoolProjects'
-import { useAnimation } from 'framer-motion';
+import ProudOfProjects from './ProudOfProjects/ProudOfProject';
 
-
-const ProjectSection = () => {
-  const controls = useAnimation();
+export default function ProjectSection() {
   return (
     <section>
-        <ProudOfProjects />
-        <SchoolProjects controls={controls} />
+      <ProudOfProjects />
+      {/* School projects are archived in SchoolProject/ and public/data/projects.json.
+          Keep them available for later without rendering them on the portfolio. */}
     </section>
-  )
+  );
 }
-
-export default ProjectSection
