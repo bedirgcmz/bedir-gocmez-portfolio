@@ -28,29 +28,19 @@ const HireMePopup = () => {
 
   const projects = [
     {
-      img: "simpletask.jpg",
-      href: "https://play.google.com/store/apps/details?id=com.bgSweden.simpletask",
-      alt: "Sky Tech Education Academy project"
+      img: "yormio.jpg",
+      href: "https://yormio-app.netlify.app/",
+      alt: "Yormio"
+    },
+    {
+      img: "parlio.jpg",
+      href: "https://parlio-app.netlify.app/",
+      alt: "Parlio"
     },
     {
       img: "sky.jpg",
       href: "https://skyeducationacademy.com/",
-      alt: "Sky Tech Education Academy project"
-    },
-    {
-        img: "portfolio.jpg",
-        href: "https://bedirgocmez.com/",
-        alt: "Meals application project"
-      },
-    {
-      img: "rosee.jpg",
-      href: "https://www.rosetravel.co.uk/",
-      alt: "Rose Taxi project"
-    },
-    {
-      img: "parking.jpg",
-      href: "https://parking-time-next.vercel.app/",
-      alt: "Meals application project"
+      alt: "SkyEducation"
     },
   ];
 

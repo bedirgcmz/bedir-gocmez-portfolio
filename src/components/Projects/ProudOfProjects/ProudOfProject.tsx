@@ -8,9 +8,11 @@ import styles from './ProudOfProjects.module.css';
 
 type Project = {
   title: string;
+  titleLines?: string[];
   url: string;
   description: string;
   alt: string;
+  previewAspectRatio?: string;
   demoLink?: string;
   linkLabel?: string;
   stack: string[];
@@ -21,11 +23,26 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: 'Yormio',
+    url: 'yormio.jpg',
+    description:
+      'An AI-powered mobile app that turns natural voice or pasted text into reminders, checklists, and organized plans. Extract multiple actions in one capture, review them before approval, and keep upcoming tasks in view with a calendar and widgets.',
+    alt: 'Yormio voice capture, reminders, and calendar app in light and dark mode',
+    previewAspectRatio: '1794 / 877',
+    demoLink: 'https://yormio-app.netlify.app/',
+    linkLabel: 'Explore Yormio',
+    stack: ['AI', 'Voice & Text', 'Mobile', 'Product UX'],
+    facts: ['Review before saving', 'Calendar & widgets', 'Light & dark mode'],
+    impact: 'AI-powered reminders & lists',
+    accent: '#2dd4bf',
+  },
+  {
     title: 'Parlio',
-    url: 'parlio',
+    url: 'parlio.jpg',
     description:
       'A launched multilingual React Native learning app with seven languages, subscriptions, offline functionality, and Supabase integration. Turns your own sentences into practice with AI translation, flashcards, quizzes, and listening.',
     alt: 'Parlio app preview',
+    previewAspectRatio: '3461 / 1690',
     demoLink: 'https://parlio-app.netlify.app/',
     stack: ['React Native', 'TypeScript', 'Supabase', 'AI'],
     facts: ['7 languages', 'Offline learning', 'Subscriptions'],
@@ -34,10 +51,11 @@ const projects: Project[] = [
   },
   {
     title: 'Simple Task',
-    url: 'simpletask',
+    url: 'Simplytask.jpg',
     description:
       'A React Native task app live on Google Play, focused on clean daily workflows, scalable structure, and a practical mobile user experience.',
     alt: 'Simple Task project preview',
+    previewAspectRatio: '1794 / 876',
     demoLink: 'https://play.google.com/store/apps/details?id=com.bgSweden.simpletask',
     stack: ['React Native', 'Mobile', 'NativeWind'],
     facts: ['Google Play', 'Daily workflow', 'Mobile UX'],
@@ -45,11 +63,12 @@ const projects: Project[] = [
     accent: '#22c55e',
   },
   {
-    title: 'SkyEducation',
-    url: 'sky',
+    title: 'Sky Education',
+    titleLines: ['Sky', 'Education'],
+    url: 'sky.jpg',
     description:
       'A responsive learning platform for children, built with React, multilingual content, EmailJS, Google Sheets submissions, and polished Framer Motion interactions.',
-    alt: 'SkyEducation project preview',
+    alt: 'Sky Education project preview',
     demoLink: 'https://skyeducationacademy.com/',
     stack: ['React', 'i18n', 'EmailJS', 'Motion'],
     facts: ['3 languages', 'Lead forms', 'Course platform'],
@@ -58,7 +77,7 @@ const projects: Project[] = [
   },
   {
     title: 'Parking Time',
-    url: 'parking',
+    url: 'parking.jpg',
     description:
       'A parking management product built in a cross-functional team with Next.js, TypeScript, Tailwind, Contentful CMS, reusable components, and API integrations.',
     alt: 'Parking Time project preview',
@@ -70,7 +89,7 @@ const projects: Project[] = [
   },
   {
     title: 'Rosa Taxi',
-    url: 'rosee',
+    url: 'rosee.jpg',
     description:
       'A service website for a UK taxi company with custom branding, responsive UX, form flows, and a warm visual identity designed around trust and clarity.',
     alt: 'Rosa Taxi project preview',
@@ -82,7 +101,7 @@ const projects: Project[] = [
   },
   {
     title: 'Profile',
-    url: 'portfolio',
+    url: 'portfolio.jpg',
     description:
       'A Next.js and TypeScript portfolio with dark/light mode, accessibility-minded UI, data-driven sections, motion, and a static export deployment flow.',
     alt: 'Portfolio project preview',
@@ -151,15 +170,12 @@ export default function ProudOfProjects() {
       <div className={styles.header} data-project-heading>
         <p>Selected work</p>
         <h2 id="featured-projects-title">Projects that show how I build</h2>
-        <p>
-          Also delivered: <a href="https://yormio-app.netlify.app/" target="_blank" rel="noreferrer" className="underline underline-offset-4">Yormio</a>.
-        </p>
       </div>
 
       <div className={styles.showcase}>
         <aside className={styles.stickyPanel}>
           <div className={styles.eyebrow}>0{activeIndex + 1} / 0{projects.length}</div>
-          <h3>{activeProject.title}</h3>
+          <ProjectHeading project={activeProject} />
           <p>{activeProject.impact}</p>
           <div className={styles.progressRail} aria-hidden="true">
             <span style={{ height: `${((activeIndex + 1) / projects.length) * 100}%` }} />
@@ -178,7 +194,7 @@ export default function ProudOfProjects() {
             >
               <div className={styles.copy}>
                 <span className={styles.projectNumber}>0{index + 1}</span>
-                <h3>{project.title}</h3>
+                <ProjectHeading project={project} />
                 <p>{project.description}</p>
                 <div className={styles.stack}>
                   {project.stack.map((item) => (
@@ -209,11 +225,12 @@ export default function ProudOfProjects() {
                   <span />
                 </div>
                 <Image
-                  src={`/images/proudProjects/${project.url}.jpg`}
+                  src={`/images/proudProjects/${project.url}`}
                   alt={project.alt}
                   width={640}
                   height={460}
-                  className={styles.projectImage}
+                  className={`${styles.projectImage} ${project.previewAspectRatio ? styles.fullImage : ''}`}
+                  style={{ aspectRatio: project.previewAspectRatio }}
                   sizes="(max-width: 768px) 92vw, 48vw"
                 />
               </div>
@@ -222,5 +239,15 @@ export default function ProudOfProjects() {
         </div>
       </div>
     </section>
+  );
+}
+
+function ProjectHeading({ project }: { project: Project }) {
+  return (
+    <h3 aria-label={project.title}>
+      {project.titleLines
+        ? project.titleLines.map((line) => <span key={line} className="block">{line}</span>)
+        : project.title}
+    </h3>
   );
 }
